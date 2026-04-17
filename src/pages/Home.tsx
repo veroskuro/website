@@ -44,7 +44,7 @@ export default function Home() {
               <span aria-hidden className="absolute -bottom-px -right-px w-2 h-2 border-b border-r border-outline-variant/40" />
 
               <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDweU3Ic_TECFBoRccvuU__mRJHTTD9cLgbEjbh7cSYo7F7_Cmm5oNQc_BegryboV6K7ZZFfFRLCKPtwyRXKroO7_H12luPUCwmfrPNLCljcBICzKjQEolNXYn-56qchRVRnP0RbFOpbGMncVbFuBapjD3Y6WSURXSdOal59xrzcMf-78NumpehMljVcjmZ0HrJmaO_T_lxHrlBmHmX6CVEio_JwtlcWsQQO9l7wdDxy7SGv_-PNO4ZC7jjquHYqzYtP_20fYcScUs" 
+                src="/portrait.png" 
                 alt={profileData.name} 
                 className="w-full h-full object-cover grayscale opacity-70 mix-blend-lighten" 
               />
