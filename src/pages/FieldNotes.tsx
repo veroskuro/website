@@ -60,7 +60,7 @@ export default function FieldNotes() {
 
         {filteredNotes.map((note) => (
           <article key={note.slug} className="bg-surface-container-low p-6 md:p-10 hover:bg-surface-container-highest transition-colors duration-500 group relative overflow-hidden flex flex-col md:flex-row gap-6 md:gap-8 items-start">
-            <div className="absolute top-0 right-0 p-6 flex items-center gap-2">
+            <div className="flex items-center gap-2 mb-2 md:absolute md:top-0 md:right-0 md:p-6 md:mb-0">
               <span className={`w-2 h-2 rounded-full ${note.attributes.status === 'ACTIVE' ? 'bg-primary animate-pulse' : note.attributes.status === 'PENDING' ? 'bg-secondary' : 'bg-outline-variant'}`}></span>
               <span className={`font-label text-xs tracking-widest ${note.attributes.status === 'ACTIVE' ? 'text-primary' : note.attributes.status === 'PENDING' ? 'text-secondary' : 'text-outline-variant'}`}>
                 {note.attributes.status}

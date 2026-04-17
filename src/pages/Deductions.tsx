@@ -52,7 +52,7 @@ export default function Deductions() {
           
           return (
             <Link key={d.slug} to={`/deductions/${d.slug}`} className="group flex flex-col gap-3 p-6 -mx-6 rounded-lg hover:bg-surface-container-low transition-colors duration-300">
-              <div className="flex flex-wrap items-center gap-4 font-label text-xs tracking-widest text-outline-variant uppercase mb-1">
+              <div className="flex flex-wrap items-center gap-4 font-label text-xs tracking-widest text-on-surface-variant uppercase mb-1">
                 <span className="text-primary">{new Date(d.attributes.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                 <span className="w-1 h-1 rounded-full bg-outline-variant/50"></span>
                 <span>{readingTime} min read</span>
