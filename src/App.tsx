@@ -8,10 +8,12 @@ import DeductionPost from './pages/DeductionPost';
 import Investigation from './pages/Investigation';
 import FieldNotes from './pages/FieldNotes';
 import Now from './pages/Now';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
