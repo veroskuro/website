@@ -6,7 +6,8 @@ import Artifacts from './pages/Artifacts';
 import Deductions from './pages/Deductions';
 import DeductionPost from './pages/DeductionPost';
 import Investigation from './pages/Investigation';
-import LabNotes from './pages/LabNotes';
+import FieldNotes from './pages/FieldNotes';
+import Now from './pages/Now';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           <Route path="deductions" element={<Deductions />} />
           <Route path="deductions/:slug" element={<DeductionPost />} />
           <Route path="investigation" element={<Investigation />} />
-          <Route path="lab-notes" element={<LabNotes />} />
+          <Route path="field-notes" element={<FieldNotes />} />
+          <Route path="now" element={<Now />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -44,12 +44,12 @@ export default function Navbar() {
             INVESTIGATION
           </Link>
           <Link 
-            to="/lab-notes" 
+            to="/field-notes" 
             className={`font-headline tracking-tight uppercase text-sm transition-all duration-300 ${
-              isActive('/lab-notes') ? 'text-primary border-b border-primary pb-1' : 'text-on-surface opacity-70 hover:text-primary hover:opacity-100'
+              isActive('/field-notes') ? 'text-primary border-b border-primary pb-1' : 'text-on-surface opacity-70 hover:text-primary hover:opacity-100'
             }`}
           >
-            LAB NOTES
+            FIELD NOTES
           </Link>
           <Link 
             to="/deductions" 
@@ -100,11 +100,11 @@ export default function Navbar() {
             Investigation
           </Link>
           <Link 
-            to="/lab-notes" 
+            to="/field-notes" 
             onClick={() => setIsMobileMenuOpen(false)}
-            className={`font-headline tracking-tight uppercase text-lg ${isActive('/lab-notes') ? 'text-primary' : 'text-on-surface'}`}
+            className={`font-headline tracking-tight uppercase text-lg ${isActive('/field-notes') ? 'text-primary' : 'text-on-surface'}`}
           >
-            Lab Notes
+            Field Notes
           </Link>
           <Link 
             to="/deductions" 

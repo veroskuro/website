@@ -3,5 +3,12 @@
   "title": "Model Autopsy API",
   "description": "Transformer internals exposed as a REST service. Twelve endpoints over residual streams, attention patterns, and logit lens projections. Redis-cached activations, Docker Compose orchestration, Pydantic-validated schemas — Jupyter output, production contract.",
   "metadata": "[ENDPOINTS: 12 | CACHE: REDIS]",
-  "spanType": "normal"
+  "spanType": "normal",
+  "problem_solved": "Solves the problem of missing context in standard logs.",
+  "github_url": "/veroskuro/MA-112",
+  "tech_stack": [
+    "React",
+    "TypeScript",
+    "Python"
+  ]
 }

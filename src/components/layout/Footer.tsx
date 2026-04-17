@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import siteSettings from '../../content/data/settings.json';
+import profileData from '../../content/data/profile.json';
 
 export default function Footer() {
   return (
@@ -20,10 +21,25 @@ export default function Footer() {
           <Link to="/detective" className="text-on-surface opacity-50 hover:opacity-100 hover:text-primary transition-all duration-300">
             Contact the Detective
           </Link>
+          <Link to="/now" className="text-on-surface opacity-50 hover:opacity-100 hover:text-primary transition-all duration-300">
+            /now
+          </Link>
           <Link to="/" className="text-on-surface opacity-50 hover:opacity-100 hover:text-primary transition-all duration-300">
             Confidentiality Policy
           </Link>
         </nav>
+
+        <div className="flex flex-wrap justify-center gap-6 mt-2">
+          <a href={`mailto:${profileData.contact.email}`} className="text-primary hover:text-primary-container transition-colors flex items-center gap-2 font-label text-xs uppercase tracking-wider">
+            <span className="material-symbols-outlined text-sm">mail</span> Email
+          </a>
+          <a href={`https://github.com${profileData.contact.github}`} target="_blank" rel="noreferrer" className="text-on-surface opacity-80 hover:opacity-100 hover:text-primary transition-colors flex items-center gap-2 font-label text-xs uppercase tracking-wider">
+            <span className="material-symbols-outlined text-sm">code</span> GitHub
+          </a>
+          <a href="https://x.com/deven_choudhary" target="_blank" rel="noreferrer" className="text-on-surface opacity-80 hover:opacity-100 hover:text-primary transition-colors flex items-center gap-2 font-label text-xs uppercase tracking-wider">
+            <span className="material-symbols-outlined text-sm">public</span> Twitter
+          </a>
+        </div>
         
         <div className="font-label text-xs uppercase tracking-widest text-on-surface opacity-30 mt-4">
           <p>© MMXIV-MMXXVI The Forensic Archive • All Deductions Reserved</p>

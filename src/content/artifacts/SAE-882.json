@@ -3,5 +3,12 @@
   "title": "SAE Feature Engine",
   "description": "Training and serving platform for sparse autoencoder features. Dual-indexed storage — PostgreSQL for metadata, Qdrant for high-dimensional cosine similarity. Ghost-gradient recovery for dead features, LLM-assisted monosemantic labeling, REST API for downstream consumers.",
   "metadata": "[INDEX: PG + QDRANT]",
-  "spanType": "tall"
+  "spanType": "tall",
+  "problem_solved": "Solves the problem of missing context in standard logs.",
+  "github_url": "/veroskuro/SAE-882",
+  "tech_stack": [
+    "React",
+    "TypeScript",
+    "Python"
+  ]
 }

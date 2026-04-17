@@ -1,0 +1,9 @@
+{
+  "lastUpdated": "2026-04-18T00:00:00.000Z",
+  "currentFocus": "Currently, my primary focus is wrapping up the experiments for the mBERT cross-lingual sentiment paper. I'm running final ablations on the Hinglish dataset to see where the circuits diverge from standard Hindi. I'm also putting some polish on Circuit Surgeon so it can be released alongside the paper as a reproducibility artifact.\n\nOutside of direct research, I'm trying to improve my theoretical grounding by reviewing Anthropic's latest work on SAEs and feature splitting.",
+  "readingList": [
+    "Towards Monosemanticity (Anthropic)",
+    "A Mathematical Framework for Transformer Circuits",
+    "Dune by Frank Herbert"
+  ]
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Deven Choudhary - Deductions</title>
+    <link>https://devenchoudhary.com</link>
+    <description>Mechanistic Interpretability Research, Field Notes, and Deductions.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Apr 2026 20:34:37 GMT</lastBuildDate>
+    
+    <item>
+      <title><![CDATA[Understanding Activation Patching in mBERT]]></title>
+      <link>https://devenchoudhary.com/deductions/2026-04-17-understanding-activation-patching</link>
+      <guid>https://devenchoudhary.com/deductions/2026-04-17-understanding-activation-patching</guid>
+      <pubDate>Fri, 17 Apr 2026 12:00:00 GMT</pubDate>
+      <description><![CDATA[It is a capital mistake to theorize before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts.
+
+When attempting to localize the sentiment circuit wi...]]></description>
+    </item>
+  </channel>
+</rss>

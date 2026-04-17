@@ -18,9 +18,9 @@ collections:
       - {label: "Case ID", name: "case_id", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       
-  - name: "lab_notes"
-    label: "Lab Notes (Logs)"
-    folder: "src/content/lab-notes"
+  - name: "field_notes"
+    label: "Field Notes"
+    folder: "src/content/field-notes"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -57,6 +57,9 @@ collections:
       - {label: "Artifact ID", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
+      - {label: "Problem Solved", name: "problem_solved", widget: "text", required: false}
+      - {label: "GitHub URL", name: "github_url", widget: "string", required: false}
+      - {label: "Tech Stack", name: "tech_stack", widget: "list", required: false}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Metadata String", name: "metadata", widget: "string"}
       - {label: "Grid Span Size", name: "spanType", widget: "select", options: ["short", "normal", "tall"]}
@@ -124,3 +127,11 @@ collections:
           - {label: "Site Title", name: "title", widget: "string"}
           - {label: "Site Subtitle", name: "subtitle", widget: "string"}
           - {label: "Footer Text", name: "footerText", widget: "text"}
+      - label: "Now Page Content"
+        name: "now"
+        file: "src/content/data/now.json"
+        format: "json"
+        fields:
+          - {label: "Last Updated", name: "lastUpdated", widget: "datetime"}
+          - {label: "Current Focus", name: "currentFocus", widget: "markdown"}
+          - {label: "Reading List", name: "readingList", widget: "list", required: false}

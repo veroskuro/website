@@ -42,11 +42,11 @@ export default function Home() {
           <div className="mt-8 p-6 bg-surface-container border border-outline-variant/20 rounded-sm">
             <h4 className="font-label text-sm text-primary uppercase tracking-widest mb-4">Navigating the Archive</h4>
             <ul className="font-body text-sm text-on-surface-variant space-y-3">
-              <li><strong className="text-on-surface">Investigations:</strong> Deep dives into current and past research projects.</li>
-              <li><strong className="text-on-surface">Lab Notes:</strong> Short, chronological logs of daily findings and experiments.</li>
-              <li><strong className="text-on-surface">Deductions:</strong> Long-form technical essays and blog posts.</li>
-              <li><strong className="text-on-surface">Artifacts:</strong> Custom software tools and visualizations we've built.</li>
-              <li><strong className="text-on-surface">Dossier:</strong> Curriculum Vitae, academic record, and contact protocols.</li>
+              <li><strong className="text-on-surface">Investigations:</strong> Ongoing research projects — what I'm currently working on.</li>
+              <li><strong className="text-on-surface">Field Notes:</strong> Short, chronological logs of weekly findings and experiments.</li>
+              <li><strong className="text-on-surface">Deductions:</strong> Long-form essays. On research, on thinking, on whatever.</li>
+              <li><strong className="text-on-surface">Artifacts:</strong> Tools and software I've built.</li>
+              <li><strong className="text-on-surface">Dossier:</strong> Curriculum Vitae, academic record, and contact.</li>
             </ul>
           </div>
         </section>

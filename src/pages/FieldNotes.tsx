@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { parseMarkdownFiles } from '../utils/markdown';
 
-interface LabNoteAttributes {
+interface FieldNoteAttributes {
   title: string;
   date: Date;
   status: 'ACTIVE' | 'PENDING' | 'COLD';
@@ -11,11 +11,11 @@ interface LabNoteAttributes {
   image?: string;
 }
 
-const markdownFiles = import.meta.glob('../content/lab-notes/*.md', { eager: true, query: '?raw', import: 'default' });
-const allNotes = parseMarkdownFiles<LabNoteAttributes>(markdownFiles as Record<string, string>);
+const markdownFiles = import.meta.glob('../content/field-notes/*.md', { eager: true, query: '?raw', import: 'default' });
+const allNotes = parseMarkdownFiles<FieldNoteAttributes>(markdownFiles as Record<string, string>);
 allNotes.sort((a, b) => new Date(b.attributes.date).getTime() - new Date(a.attributes.date).getTime());
 
-export default function LabNotes() {
+export default function FieldNotes() {
   const [activeFilter, setActiveFilter] = useState(true);
   const [pendingFilter, setPendingFilter] = useState(true);
   const [coldFilter, setColdFilter] = useState(false);
@@ -54,7 +54,7 @@ export default function LabNotes() {
 
       <section className="md:col-span-9 flex flex-col gap-8 mb-24">
         <header className="mb-8">
-          <h1 className="font-headline text-5xl tracking-tight text-on-surface mb-4">The Lab Notes</h1>
+          <h1 className="font-headline text-5xl tracking-tight text-on-surface mb-4">Field Notes</h1>
           <p className="font-label text-sm text-primary tracking-widest uppercase">{allNotes.length} Open Investigative Files Found in Archive</p>
         </header>
 

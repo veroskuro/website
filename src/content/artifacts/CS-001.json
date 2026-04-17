@@ -4,5 +4,12 @@
   "description": "Automated circuit discovery engine. ACDC-style edge attribution patching wrapped in a FastAPI service with async job queues, content-hash caching, and a MockHookedTransformer test harness so the entire pipeline runs on CI without a GPU.",
   "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCeLm_Z1p-DHSe3Qw_TeWz-LaIXFkY3ySzV1hZ4XlaMnknRcxpkSMpBOdpvaaUW7lLj5dWOZqeQWkzUYhk3QE2eK_xV1Cl1TkLWVnGNHZ6Ov65yHqKdQV3wIsM2fbjntoWA3G4Y7P6j8lkQiEW31XapheUHman9EIDI-fiq34zTkU8h4O6FKXb3zQrk2oMt6NTFVqriQinFLJGHaZrqIw5yT_3vmSGf0evD1ISA328rDBP89hzAvvHZmaS5VmvvL5h4CXRARbnMlbU",
   "metadata": "[METHOD: ACDC | GPU-OPTIONAL]",
-  "spanType": "normal"
+  "spanType": "normal",
+  "problem_solved": "Solves the problem of missing context in standard logs.",
+  "github_url": "/veroskuro/CS-001",
+  "tech_stack": [
+    "React",
+    "TypeScript",
+    "Python"
+  ]
 }
