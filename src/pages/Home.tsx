@@ -16,7 +16,7 @@ export default function Home() {
         }}
       />
 
-      <div className="max-w-5xl mx-auto px-6 md:px-12 w-full relative z-10 mt-12 md:mt-0">
+      <div className="max-w-5xl mx-auto px-6 md:px-12 w-full relative z-10 mt-12 md:mt-8">
         
         {/* Header: Title + Portrait side by side */}
         <header className="mb-16 md:mb-24">
@@ -33,7 +33,7 @@ export default function Home() {
             </div>
 
             {/* Right: Portrait */}
-            <div className="relative w-32 md:w-48 aspect-square border border-outline-variant/20 bg-surface-container-low p-1.5 shrink-0 order-first md:order-last">
+            <div className="relative w-40 md:w-48 aspect-square border border-outline-variant/20 bg-surface-container-low p-1.5 shrink-0 order-first md:order-last">
               <span aria-hidden className="absolute -top-px -left-px w-2 h-2 border-t border-l border-outline-variant/40" />
               <span aria-hidden className="absolute -top-px -right-px w-2 h-2 border-t border-r border-outline-variant/40" />
               <span aria-hidden className="absolute -bottom-px -left-px w-2 h-2 border-b border-l border-outline-variant/40" />
