@@ -59,35 +59,35 @@ export default function Home() {
             <Link to="/investigation" className="group flex flex-col md:flex-row md:items-center gap-2 md:gap-8 p-5 md:p-6 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all">
               <span className="font-label text-xs tracking-widest uppercase text-primary w-32 shrink-0">Investigations</span>
               <span className="font-body text-base md:text-lg text-on-surface-variant group-hover:text-on-surface transition-colors">
-                Ongoing research projects — active cases.
+                Ongoing research projects — what I'm currently working on.
               </span>
             </Link>
 
             <Link to="/field-notes" className="group flex flex-col md:flex-row md:items-center gap-2 md:gap-8 p-5 md:p-6 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all">
               <span className="font-label text-xs tracking-widest uppercase text-primary w-32 shrink-0">Field Notes</span>
               <span className="font-body text-base md:text-lg text-on-surface-variant group-hover:text-on-surface transition-colors">
-                Short, chronological logs of weekly experiments.
+                Short logs of weekly findings and experiments.
               </span>
             </Link>
 
             <Link to="/deductions" className="group flex flex-col md:flex-row md:items-center gap-2 md:gap-8 p-5 md:p-6 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all">
               <span className="font-label text-xs tracking-widest uppercase text-primary w-32 shrink-0">Deductions</span>
               <span className="font-body text-base md:text-lg text-on-surface-variant group-hover:text-on-surface transition-colors">
-                Long-form essays and comprehensive analyses.
+                Long-form essays. On research, on thinking, on whatever.
               </span>
             </Link>
 
             <Link to="/artifacts" className="group flex flex-col md:flex-row md:items-center gap-2 md:gap-8 p-5 md:p-6 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all">
               <span className="font-label text-xs tracking-widest uppercase text-primary w-32 shrink-0">Artifacts</span>
               <span className="font-body text-base md:text-lg text-on-surface-variant group-hover:text-on-surface transition-colors">
-                Tools, infrastructure, and software builds.
+                Tools and software I've built.
               </span>
             </Link>
 
             <Link to="/dossier" className="group flex flex-col md:flex-row md:items-center gap-2 md:gap-8 p-5 md:p-6 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all">
               <span className="font-label text-xs tracking-widest uppercase text-primary w-32 shrink-0">Dossier</span>
               <span className="font-body text-base md:text-lg text-on-surface-variant group-hover:text-on-surface transition-colors">
-                Personnel file, academic record, and contact.
+                Curriculum vitae, academic record, and contact.
               </span>
             </Link>
           </div>
