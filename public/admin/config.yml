@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+media_folder: "public/uploads" # Media files will be stored in the repo under public/uploads
+public_folder: "/uploads" # The src attribute for uploaded media will begin with /uploads
+
+collections:
+  - name: "deductions"
+    label: "Deductions (Blog)"
+    folder: "src/content/deductions"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", text: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Cover Image", name: "cover", widget: "image", required: false}
+      - {label: "Case ID", name: "case_id", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      
+  - name: "lab_notes"
+    label: "Lab Notes (Logs)"
+    folder: "src/content/lab-notes"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Status", name: "status", widget: "select", options: ["ACTIVE", "PENDING", "COLD"]}
+      - {label: "File Reference", name: "reference", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      
+  - name: "investigations"
+    label: "Investigations (Projects)"
+    folder: "src/content/investigations"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Case ID", name: "case_id", widget: "string"}
+      - {label: "Last Modified", name: "date", widget: "datetime"}
+      - {label: "Hero Image", name: "hero_image", widget: "image"}
+      - {label: "Summary / Metadata", name: "summary", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}

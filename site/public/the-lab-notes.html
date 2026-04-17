@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Lab Notes - The Forensic Scholar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#e5e2e1",
+                      "outline": "#9e8d8b",
+                      "inverse-surface": "#e5e2e1",
+                      "on-tertiary": "#3a2e21",
+                      "tertiary": "#d7c3b0",
+                      "on-surface": "#e5e2e1",
+                      "secondary": "#fcb5ad",
+                      "primary-fixed-dim": "#e9c176",
+                      "on-secondary-fixed": "#350f0c",
+                      "tertiary-fixed": "#f4dfcb",
+                      "on-secondary": "#4f231f",
+                      "error": "#ffb4ab",
+                      "on-tertiary-container": "#a08e7d",
+                      "on-secondary-container": "#eca79f",
+                      "on-primary-fixed-variant": "#5d4201",
+                      "primary": "#e9c176",
+                      "surface-container-low": "#1c1b1b",
+                      "surface-variant": "#353534",
+                      "tertiary-fixed-dim": "#d7c3b0",
+                      "surface-tint": "#e9c176",
+                      "on-error": "#690005",
+                      "secondary-fixed-dim": "#fcb5ad",
+                      "outline-variant": "#514442",
+                      "primary-fixed": "#ffdea5",
+                      "on-tertiary-fixed": "#241a0e",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-primary": "#412d00",
+                      "background": "#131313",
+                      "primary-container": "#392700",
+                      "surface-bright": "#3a3939",
+                      "tertiary-container": "#34281b",
+                      "on-secondary-fixed-variant": "#6a3933",
+                      "secondary-container": "#6d3b36",
+                      "surface-container-highest": "#353534",
+                      "surface-container": "#201f1f",
+                      "surface": "#131313",
+                      "on-primary-container": "#af8c47",
+                      "surface-container-high": "#2a2a2a",
+                      "surface-dim": "#131313",
+                      "on-tertiary-fixed-variant": "#524436",
+                      "secondary-fixed": "#ffdad6",
+                      "inverse-on-surface": "#313030",
+                      "on-error-container": "#ffdad6",
+                      "error-container": "#93000a",
+                      "on-primary-fixed": "#261900",
+                      "inverse-primary": "#775a19",
+                      "on-surface-variant": "#d5c2c0"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": [
+                              "Newsreader"
+                      ],
+                      "body": [
+                              "Noto Serif"
+                      ],
+                      "label": [
+                              "Space Grotesk"
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Noto Serif', serif; }
+        .font-headline { font-family: 'Newsreader', serif; }
+        .font-body { font-family: 'Noto Serif', serif; }
+        .font-label { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-[#131313] dark:bg-zinc-950 font-serif font-light tracking-tight text-on-surface docked w-full top-0 py-6 tonal-shift-no-border bg-gradient-to-b from-[#131313] to-transparent z-50 sticky">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-12">
+<!-- Brand -->
+<div class="text-2xl font-serif italic text-[#e9c176] dark:text-amber-200">
+                The Forensic Scholar
+            </div>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#e5e2e1] opacity-70 hover:opacity-100 hover:text-[#e9c176] transition-all duration-300 ease-in-out" href="#">The Investigation</a>
+<a class="text-[#e9c176] border-b border-[#e9c176] pb-1 hover:text-[#e9c176] transition-all duration-300 ease-in-out" href="#">The Lab Notes</a>
+<a class="text-[#e5e2e1] opacity-70 hover:opacity-100 hover:text-[#e9c176] transition-all duration-300 ease-in-out" href="#">Deductions</a>
+<a class="text-[#e5e2e1] opacity-70 hover:opacity-100 hover:text-[#e9c176] transition-all duration-300 ease-in-out" href="#">The Study</a>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-6">
+<div class="relative">
+<span class="material-symbols-outlined text-[#e9c176] dark:text-amber-200 opacity-70 absolute left-0 top-1/2 -translate-y-1/2 ml-2 pointer-events-none" style="font-variation-settings: 'FILL' 0;">search</span>
+<input class="bg-surface-container-low text-on-surface outline-none border-none focus:ring-1 focus:ring-outline-variant pl-10 pr-4 py-1 font-label text-sm w-48 transition-all duration-300 focus:w-64" placeholder="Search Archives..." type="text"/>
+</div>
+<button class="text-[#e9c176] dark:text-amber-200 hover:opacity-80 transition-opacity scale-95 transition-transform duration-500">
+<span class="material-symbols-outlined">menu_book</span>
+</button>
+<img alt="Researcher's Silhouette" class="w-8 h-8 rounded-DEFAULT grayscale opacity-80 border border-outline-variant/30" data-alt="silhouette profile portrait of a researcher in low ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsCAWq_z68kB18veVt_fS8P1WXyltiEpPE1FcHjdmf32w7fPiJjhvt1y9bPUUpDkPEjaIAWzuK-LozXjRBKavfgPJDDLaFiAQMNMO6qHMZ-nWRrmwh5qUGZGktqp4J-_QELjnJepKYd6YbMJEi8TRlzDOV7ItF79nWSIG19nZnfi-JVJ7kOcDvB99kyW5v5PV-4tIxpUu6lr4NhmrT_U9KrSSozJUAmtK_l_x0Sf-JNtI2NlR-MmTq7iUq5gIoMCjEGcQKn4kpS00"/>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow max-w-7xl mx-auto px-12 w-full mt-12 grid grid-cols-1 md:grid-cols-12 gap-16">
+<!-- The Marginalia (Sidebar) -->
+<aside class="md:col-span-3 flex flex-col gap-12 pt-4">
+<div class="bg-surface-container-lowest p-6 flex flex-col gap-4">
+<h3 class="font-headline text-xl text-primary italic tracking-tight">Active Registries</h3>
+<p class="font-body text-sm italic text-on-surface-variant leading-relaxed">
+                    Filter the dockets by their current status within the investigative hierarchy. Only subjects with active hypothesis testing are shown by default.
+                </p>
+<div class="flex flex-col gap-3 mt-4">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="form-checkbox bg-surface-container-low border-outline-variant text-primary rounded-sm focus:ring-0 focus:ring-offset-0 w-4 h-4" type="checkbox"/>
+<span class="font-label text-sm tracking-wide text-on-surface group-hover:text-primary transition-colors">ACTIVE HYPOTHESIS</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="form-checkbox bg-surface-container-low border-outline-variant text-primary rounded-sm focus:ring-0 focus:ring-offset-0 w-4 h-4" type="checkbox"/>
+<span class="font-label text-sm tracking-wide text-on-surface group-hover:text-primary transition-colors">PENDING ANALYSIS</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox bg-surface-container-low border-outline-variant text-primary rounded-sm focus:ring-0 focus:ring-offset-0 w-4 h-4" type="checkbox"/>
+<span class="font-label text-sm tracking-wide text-on-surface opacity-50 group-hover:opacity-100 transition-opacity">COLD FILES</span>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-outline">Last Modified</span>
+<ul class="font-body text-sm italic text-on-surface-variant space-y-2 border-l-2 border-surface-container-low pl-4">
+<li>DOCKET-14A (2 hours ago)</li>
+<li>SUBJECT-09B (Yesterday)</li>
+<li>ARCHIVE-ZZ1 (14 Oct 1928)</li>
+</ul>
+</div>
+</aside>
+<!-- Project Dockets (Main Feed) -->
+<section class="md:col-span-9 flex flex-col gap-8">
+<header class="mb-8">
+<h1 class="font-headline text-5xl tracking-tight text-on-surface mb-4">The Lab Notes</h1>
+<p class="font-label text-sm text-primary tracking-widest uppercase">7 Open Investigative Files Found in Archive</p>
+</header>
+<!-- Docket Card 1 -->
+<article class="bg-surface-container-low p-10 hover:bg-surface-container-highest transition-colors duration-500 group relative overflow-hidden">
+<div class="absolute top-0 right-0 p-6 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label text-xs tracking-widest text-primary">ACTIVE</span>
+</div>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/4 flex flex-col gap-2">
+<span class="font-label text-xs text-outline tracking-widest uppercase">File Reference</span>
+<div class="font-label text-lg text-on-surface tracking-widest bg-surface-container inline-block px-3 py-1">#INV-892-A</div>
+<span class="font-label text-xs text-outline mt-4">12 OCT 2023</span>
+</div>
+<div class="md:w-3/4 flex flex-col gap-4">
+<h2 class="font-headline text-3xl tracking-tight text-on-surface group-hover:text-primary transition-colors">The Linguistics of Deception: Pattern Analysis in Extorted Letters</h2>
+<p class="font-body text-base text-on-surface-variant leading-relaxed">
+                            A preliminary morphological examination of handwritten anomalies discovered in the tertiary evidence locker. Focus rests upon identifying involuntary micro-tremors correlating with high-stress fabrication.
+                        </p>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="font-label text-xs px-2 py-1 border border-outline-variant/30 text-on-surface-variant">GRAPHOLOGY</span>
+<span class="font-label text-xs px-2 py-1 border border-outline-variant/30 text-on-surface-variant">LINGUISTICS</span>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-surface-container flex justify-end">
+<button class="font-label text-sm uppercase tracking-widest text-primary flex items-center gap-2 hover:text-on-primary-container transition-colors">
+                        Review Protocol <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Docket Card 2 -->
+<article class="bg-surface-container-low p-10 hover:bg-surface-container-highest transition-colors duration-500 group relative">
+<div class="absolute top-0 right-0 p-6 flex items-center gap-2 opacity-50">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label text-xs tracking-widest text-secondary">PENDING</span>
+</div>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/4 flex flex-col gap-2">
+<span class="font-label text-xs text-outline tracking-widest uppercase">File Reference</span>
+<div class="font-label text-lg text-on-surface tracking-widest bg-surface-container inline-block px-3 py-1">#TOX-114-B</div>
+<span class="font-label text-xs text-outline mt-4">08 SEP 2023</span>
+</div>
+<div class="md:w-3/4 flex flex-col gap-4">
+<h2 class="font-headline text-3xl tracking-tight text-on-surface group-hover:text-primary transition-colors">Toxin Degradation in Waterlogged Soil Samples</h2>
+<p class="font-body text-base text-on-surface-variant leading-relaxed">
+                            Evaluating the half-life of synthetic compounds when subjected to prolonged submersion in acidic peat environments. Requires cross-referencing with archived geological surveys from the Blackwood sector.
+                        </p>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="font-label text-xs px-2 py-1 border border-outline-variant/30 text-on-surface-variant">CHEMISTRY</span>
+<span class="font-label text-xs px-2 py-1 border border-outline-variant/30 text-on-surface-variant">SOIL ANALYSIS</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Docket Card 3 (Image Accent) -->
+<article class="bg-surface-container-low p-10 hover:bg-surface-container-highest transition-colors duration-500 group relative flex flex-col md:flex-row gap-8 items-center">
+<div class="md:w-1/3 w-full h-48 md:h-full relative overflow-hidden">
+<div class="absolute inset-0 bg-surface/40 group-hover:bg-transparent transition-colors duration-700 z-10 mix-blend-multiply"></div>
+<img alt="Microscope Slide" class="w-full h-full object-cover sepia-[.3] contrast-[1.2]" data-alt="close up macro shot of a vintage glass microscope slide with dark amber liquid drop under low warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcXPGUXUJofgsvkVjPCejz8h7PW0sx7embVSFxuO80gGlq2qxDcdpWT3NdbyXQBjJ-yva4LlnH3BGKSeG4pYwcZCBLsgwSCOt_A82QG5v5auSG2-4EXLQc0pjXa8CDyB-ng1qszKNhw1Dpvb7-YgtAP5xtB-htXl9dPw0JMx-iJxERAxwQRZzpkLnIy67gT8RUYy7J4jHJfJvS6C6LSP3IpkF4HJY4HIPY9ZKKp1L41g6ys73ldvxmtk8Qg4afaGYjkoE-1_2oF2Q"/>
+</div>
+<div class="md:w-2/3 flex flex-col gap-4 w-full">
+<div class="flex justify-between items-start">
+<div class="font-label text-sm text-primary tracking-widest bg-primary/10 inline-block px-2 py-1">#MIC-003-V</div>
+<span class="font-label text-xs text-outline">22 AUG 2023</span>
+</div>
+<h2 class="font-headline text-2xl tracking-tight text-on-surface">Cellular Autolysis Sequencing</h2>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed italic">
+                         Photographic evidence attached. The degradation pattern does not match anticipated environmental exposure models. Re-evaluation required immediately.
+                     </p>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#1c1b1b] dark:bg-zinc-900 font-mono text-xs uppercase tracking-widest flex flex-col items-center gap-6 w-full border-t border-[#514442]/20 py-12 mt-24 tonal shift from surface to surface-container-low flat">
+<div class="text-lg font-serif tracking-tighter text-[#e5e2e1] normal-case">
+            The Forensic Scholar
+        </div>
+<div class="flex gap-8">
+<a class="text-[#e5e2e1] opacity-50 hover:opacity-100 hover:text-[#e9c176] ease-in-out duration-300" href="#">Confidentiality Policy</a>
+<a class="text-[#e5e2e1] opacity-50 hover:opacity-100 hover:text-[#e9c176] ease-in-out duration-300" href="#">Archive Index</a>
+<a class="text-[#e5e2e1] opacity-50 hover:opacity-100 hover:text-[#e9c176] ease-in-out duration-300" href="#">Contact the Detective</a>
+</div>
+<div class="text-[#e9c176] dark:text-amber-200 mt-4 text-[10px] tracking-[0.3em]">
+            © MMXIV-MMXXIV The Forensic Archive • All Deductions Reserved
+        </div>
+</footer>
+</body></html>

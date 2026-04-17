@@ -1,0 +1,285 @@
+{
+  "name": "projects/7252454012907680381",
+  "title": "Neural Deduction",
+  "visibility": "PRIVATE",
+  "createTime": "2026-04-16T22:53:25.813819Z",
+  "updateTime": "2026-04-16T23:47:19.807859Z",
+  "projectType": "TEXT_TO_UI_PRO",
+  "thumbnailScreenshot": {
+    "name": "projects/7252454012907680381/files/71e675569b3a46f59ee9e5b5863b23bf",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugYmV4NxrP1-WS-yIGyFSHWy90Z2vmKXRKtGAj4zNfm9TppyDs25D2elPAfX2kdypwWDi3-CBEJFDQFgFFIZOmYn3F_GHrV6wgFDuj3J_JLNKCFrelzIhn4fYJWNTgw1MIxdDjNcA6G1jkCU1TF29sxVsPkIGXVh9gXWDKFnsYuf43AaPhKa25OHg4jCZV5mg2F0N_1Npm5icILkrnYuFnBIFp2rIUxgVrFLlh_b4RaSGe175sP7b_TKIQ"
+  },
+  "origin": "STITCH",
+  "deviceType": "DESKTOP",
+  "designTheme": {
+    "colorMode": "LIGHT",
+    "font": "NEWSREADER",
+    "customColor": "#FF9500",
+    "headlineFont": "NEWSREADER",
+    "bodyFont": "SPACE_GROTESK",
+    "labelFont": "SPACE_GROTESK",
+    "namedColors": {
+      "background": "#fcf9f4",
+      "error": "#ba1a1a",
+      "error_container": "#ffdad6",
+      "inverse_on_surface": "#f3f0eb",
+      "inverse_primary": "#ffb874",
+      "inverse_surface": "#31302d",
+      "on_background": "#1c1c19",
+      "on_error": "#ffffff",
+      "on_error_container": "#93000a",
+      "on_primary": "#ffffff",
+      "on_primary_container": "#643700",
+      "on_primary_fixed": "#2d1600",
+      "on_primary_fixed_variant": "#6a3b00",
+      "on_secondary": "#ffffff",
+      "on_secondary_container": "#636467",
+      "on_secondary_fixed": "#1a1c1e",
+      "on_secondary_fixed_variant": "#454749",
+      "on_surface": "#1c1c19",
+      "on_surface_variant": "#554334",
+      "on_tertiary": "#ffffff",
+      "on_tertiary_container": "#004a4b",
+      "on_tertiary_fixed": "#002020",
+      "on_tertiary_fixed_variant": "#004f51",
+      "outline": "#887361",
+      "outline_variant": "#dbc2ad",
+      "primary": "#8c5000",
+      "primary_container": "#ff9500",
+      "primary_fixed": "#ffdcbf",
+      "primary_fixed_dim": "#ffb874",
+      "secondary": "#5d5e61",
+      "secondary_container": "#e2e2e5",
+      "secondary_fixed": "#e2e2e5",
+      "secondary_fixed_dim": "#c6c6c9",
+      "surface": "#fcf9f4",
+      "surface_bright": "#fcf9f4",
+      "surface_container": "#f0ede8",
+      "surface_container_high": "#ebe8e3",
+      "surface_container_highest": "#e5e2dd",
+      "surface_container_low": "#f6f3ee",
+      "surface_container_lowest": "#ffffff",
+      "surface_dim": "#dcdad5",
+      "surface_tint": "#8c5000",
+      "surface_variant": "#e5e2dd",
+      "tertiary": "#00696b",
+      "tertiary_container": "#00c2c5",
+      "tertiary_fixed": "#5af8fb",
+      "tertiary_fixed_dim": "#2ddbde"
+    },
+    "designMd": "# Design System Strategy: The Forensic Scholar\n\n## 1. Overview & Creative North Star\n**Creative North Star: \"The Digital Forensic Study\"**\n\nThis design system is built for a researcher who operates at the intersection of cold logic and human intuition. It rejects the \"friendly\" softness of modern SaaS in favor of an aesthetic that feels like a high-end, digital laboratory hidden within a Victorian library. \n\nWe break the standard \"template\" look by utilizing **strict 0px corner radii** (sharp, uncompromising edges) and **asymmetrical layouts** that mimic a detective’s evidence board. The design system prioritizes \"The Observation\"—using expansive white space to draw the eye to microscopic technical details. We leverage a dual-typographic soul: the cold, monospaced precision of machine code and the warm, serifed narrative of the human investigator.\n\n---\n\n## 2. Colors\nThe palette is a dialogue between the archival (`surface`) and the clinical (`primary`).\n\n*   **The Foundation:** Use `surface` (#fcf9f4) as your primary canvas. It evokes vintage paper without the \"yellowing\" of a cliché.\n*   **The Depth:** `inverse_surface` (#31302d) provides the deep charcoal intensity required for high-contrast \"Forensic\" mode or dark-themed sections.\n*   **The Accent:** `primary` (#8c5000) acts as our \"Detective Amber.\" Use it sparingly—only for vital discoveries, critical CTAs, or active data points.\n\n### The \"No-Line\" Rule\nStandard 1px borders are strictly prohibited for sectioning. To separate the \"Archive\" (narrative) from the \"Laboratory\" (technical data), use background shifts. \n*   Place a `surface_container_low` (#f6f3ee) section against a `surface` background.\n*   For nested technical specs, use `surface_container_highest` (#e5e2dd) to create a \"recessed\" feel.\n\n### Glass & Texture\nFor floating \"evidence cards\" or technical overlays, use **Glassmorphism**:\n*   **Token:** `surface_container_lowest` (#ffffff) at 70% opacity.\n*   **Effect:** `backdrop-blur: 12px`.\n*   **Signature Texture:** Use a subtle CSS linear gradient from `primary` to `primary_container` (#ff9500) for high-level data visualizations to give them a \"glowing filament\" quality.\n\n---\n\n## 3. Typography\nThe system uses typography to signal the *mode* of thought.\n\n*   **Narrative (Serif - Newsreader):** Used for \"Human\" elements—essays, philosophies, and introductions. It is elegant, slightly academic, and commanding.\n    *   *Display-LG:* 3.5rem. Use this for provocative statements, not just titles.\n    *   *Headline-MD:* 1.75rem. For section headers that feel like book chapters.\n*   **Technical (Monospace - Space Grotesk):** Used for \"Mechanistic\" elements—data labels, coordinate markers, and code snippets.\n    *   *Title-SM:* 1rem. The standard for technical sub-headers.\n    *   *Label-SM:* 0.6875rem. Used for \"metadata\" (dates, reading times, coordinates).\n\n---\n\n## 4. Elevation & Depth\nIn this system, depth is \"Physicality,\" not \"Shadow.\"\n\n*   **The Layering Principle:** Rather than using shadows to lift objects, we use **Tonal Stacking**. An \"Evidence Card\" should be `surface_container_lowest` (#ffffff) sitting on a `surface_container` (#f0ede8) background. This creates a crisp, architectural depth.\n*   **Ambient Shadows:** If a floating element (like a diagnostic tooltip) is required, use a tinted shadow: `rgba(28, 28, 25, 0.06)` with a 32px blur. It should look like a soft atmospheric occlusion, not a \"drop shadow.\"\n*   **The \"Ghost Border\" Fallback:** For interactive inputs, use `outline_variant` (#dbc2ad) at **15% opacity**. It should be felt more than seen.\n*   **Coordinate Grids:** To emphasize the \"Mechanistic\" nature, use a repeating background pattern of 1px dots or 24px grid lines using `outline_variant` at 5% opacity.\n\n---\n\n## 5. Components\n\n### Buttons\n*   **Primary:** Solid `primary` (#8c5000), white text, 0px radius. No shadow. On hover, shift to `on_primary_container` (#643700).\n*   **Tertiary (The \"Clue\"):** Underlined `label-md` text. The underline is `primary` and should be 1px offset by 4px.\n\n### Inputs & Fields\n*   **Style:** `surface_container_low` background with a bottom-only border of `outline` (#887361). \n*   **Focus:** The bottom border transforms to `primary` (#8c5000) with a 2px thickness.\n\n### Cards & Lists\n*   **Strict Rule:** No dividers. Separate list items using 16px of vertical `body-md` spacing. \n*   **Technical Cards:** Use a `surface_container_high` (#ebe8e3) background. In the top-right corner, always include a `label-sm` \"Serial Number\" or timestamp to reinforce the forensic theme.\n\n### Data Markers (The \"Mechanistic\" Component)\n*   Unique to this system: Small, 4x4px squares of `primary` color used as bullet points or to mark data intersections on a grid. They represent the \"Brilliant\" intensity of the researcher.\n\n---\n\n## 6. Do's and Don'ts\n\n### Do:\n*   **Embrace Asymmetry:** Align technical data to the right and narrative text to the left with significant gutter gaps.\n*   **Use Mono for Numbers:** Always use `spaceGrotesk` for numerals, even within serif paragraphs.\n*   **Intentional Whitespace:** If you think there is enough space, add 20% more. The \"Holmes\" archetype requires room to think.\n\n### Don't:\n*   **No Rounded Corners:** Any radius > 0px breaks the \"Clinical/Forensic\" persona.\n*   **No Generic Icons:** Avoid \"Material Design\" filled icons. Use thin-stroke (1px) icons or, preferably, text-based labels.\n*   **No Vibrant Gradients:** Keep gradients limited to the `primary` amber range. Never use \"marketing\" purples or blues.\n*   **No Center Alignment:** Avoid centering large blocks of text. It feels too much like a template. Keep it \"Archival\" (Left-aligned).",
+    "colorVariant": "FIDELITY",
+    "overridePrimaryColor": "#FF9500",
+    "overrideSecondaryColor": "#1A1C1E",
+    "overrideTertiaryColor": "#00CED1",
+    "overrideNeutralColor": "#F5F2ED",
+    "spacingScale": 3
+  },
+  "screenInstances": [
+    {
+      "id": "0c4ec5e5a72946d08dc298387cb1ead3",
+      "sourceScreen": "projects/7252454012907680381/screens/0c4ec5e5a72946d08dc298387cb1ead3",
+      "x": 6400,
+      "y": 8360,
+      "width": 1280,
+      "height": 1632,
+      "hidden": true
+    },
+    {
+      "id": "1680925e2dc841afb7af7782f5017002",
+      "sourceScreen": "projects/7252454012907680381/screens/1680925e2dc841afb7af7782f5017002",
+      "x": 3712,
+      "y": 5383,
+      "width": 1280,
+      "height": 2518,
+      "hidden": true
+    },
+    {
+      "id": "30811095757d48b887c9955cb8a1682a",
+      "sourceScreen": "projects/7252454012907680381/screens/30811095757d48b887c9955cb8a1682a",
+      "x": 12230,
+      "y": 8360,
+      "width": 1280,
+      "height": 2996
+    },
+    {
+      "id": "415d8b371b0945759e292f7aa4087b1f",
+      "sourceScreen": "projects/7252454012907680381/screens/415d8b371b0945759e292f7aa4087b1f",
+      "x": 9088,
+      "y": 8360,
+      "width": 1280,
+      "height": 1117
+    },
+    {
+      "id": "60d5ead41d2e4c7eb6ce2ed4e3c92f13",
+      "sourceScreen": "projects/7252454012907680381/screens/60d5ead41d2e4c7eb6ce2ed4e3c92f13",
+      "x": 6443,
+      "y": 8365,
+      "width": 1280,
+      "height": 1632
+    },
+    {
+      "id": "65b76294db854ecbaa8afc9a2280eb9f",
+      "sourceScreen": "projects/7252454012907680381/screens/65b76294db854ecbaa8afc9a2280eb9f",
+      "x": 3712,
+      "width": 1280,
+      "height": 1024,
+      "hidden": true
+    },
+    {
+      "id": "72e5b5120c8e4b219fdf1a7c9394382b",
+      "sourceScreen": "projects/7252454012907680381/screens/72e5b5120c8e4b219fdf1a7c9394382b",
+      "x": 3712,
+      "y": 2650,
+      "width": 1280,
+      "height": 2477,
+      "hidden": true
+    },
+    {
+      "id": "7db32e778f9f479d8baa904c383e3d2c",
+      "sourceScreen": "projects/7252454012907680381/screens/7db32e778f9f479d8baa904c383e3d2c",
+      "x": 10886,
+      "y": 8360,
+      "width": 1280,
+      "height": 1675
+    },
+    {
+      "id": "8a19f61c7024476c92c5d506d6572c00",
+      "sourceScreen": "projects/7252454012907680381/screens/8a19f61c7024476c92c5d506d6572c00",
+      "x": 2368,
+      "y": 5383,
+      "width": 1280,
+      "height": 1526,
+      "hidden": true
+    },
+    {
+      "id": "8f45e8c9067c45e680ef144a13389e78",
+      "sourceScreen": "projects/7252454012907680381/screens/8f45e8c9067c45e680ef144a13389e78",
+      "x": 5056,
+      "width": 1280,
+      "height": 1678,
+      "hidden": true
+    },
+    {
+      "id": "8f8e44bf9f904710b20bb084f6a74cb9",
+      "sourceScreen": "projects/7252454012907680381/screens/8f8e44bf9f904710b20bb084f6a74cb9",
+      "x": 5056,
+      "y": 2650,
+      "width": 1280,
+      "height": 1024,
+      "hidden": true
+    },
+    {
+      "id": "93f791faab264946b9df9728bd209407",
+      "sourceScreen": "projects/7252454012907680381/screens/93f791faab264946b9df9728bd209407",
+      "x": 2368,
+      "width": 1280,
+      "height": 2394,
+      "hidden": true
+    },
+    {
+      "id": "9812c27b5f8647059a4293b942c2c450",
+      "sourceScreen": "projects/7252454012907680381/screens/9812c27b5f8647059a4293b942c2c450",
+      "x": 2368,
+      "y": 2650,
+      "width": 1280,
+      "height": 1725,
+      "hidden": true
+    },
+    {
+      "id": "989292b253db474c9461a770747fb98d",
+      "sourceScreen": "projects/7252454012907680381/screens/989292b253db474c9461a770747fb98d",
+      "y": 12752,
+      "width": 390,
+      "height": 884
+    },
+    {
+      "id": "a4ac3f2d3f1d4b31a921d7a90dc458e1",
+      "sourceScreen": "projects/7252454012907680381/screens/a4ac3f2d3f1d4b31a921d7a90dc458e1",
+      "x": 5056,
+      "y": 5383,
+      "width": 1280,
+      "height": 2721,
+      "hidden": true
+    },
+    {
+      "id": "assets-06562e7a7ff14b6da934baaef7d21b6d-1776380743022",
+      "y": 2650,
+      "width": 960,
+      "height": 540,
+      "hidden": true,
+      "sourceAsset": "assets/06562e7a7ff14b6da934baaef7d21b6d",
+      "type": "DESIGN_SYSTEM_INSTANCE"
+    },
+    {
+      "id": "assets-91b731793af041918cb2af204f66fa03-1776380021975",
+      "width": 960,
+      "height": 540,
+      "hidden": true,
+      "sourceAsset": "assets/91b731793af041918cb2af204f66fa03",
+      "type": "DESIGN_SYSTEM_INSTANCE"
+    },
+    {
+      "id": "assets-c1a4770c311a465db09f5649851332fa-1776380920173",
+      "y": 5383,
+      "width": 960,
+      "height": 540,
+      "hidden": true,
+      "sourceAsset": "assets/c1a4770c311a465db09f5649851332fa",
+      "type": "DESIGN_SYSTEM_INSTANCE"
+    },
+    {
+      "id": "assets-ffd865eb6635478db1d7bda78bc1f3f2-1776381088278",
+      "y": 8360,
+      "width": 960,
+      "height": 540,
+      "sourceAsset": "assets/ffd865eb6635478db1d7bda78bc1f3f2",
+      "type": "DESIGN_SYSTEM_INSTANCE"
+    },
+    {
+      "id": "bb065ba7baa84610ab315ef7f6a1925d",
+      "sourceScreen": "projects/7252454012907680381/screens/bb065ba7baa84610ab315ef7f6a1925d",
+      "x": 1024,
+      "y": 2650,
+      "width": 1280,
+      "height": 1086,
+      "hidden": true
+    },
+    {
+      "id": "c335582caa5c4b0f8409fe18f89f6725",
+      "sourceScreen": "projects/7252454012907680381/screens/c335582caa5c4b0f8409fe18f89f6725",
+      "x": 1024,
+      "y": 5383,
+      "width": 1280,
+      "height": 1790,
+      "hidden": true
+    },
+    {
+      "id": "c7cda63db50c411f96b12608d8117d78",
+      "sourceScreen": "projects/7252454012907680381/screens/c7cda63db50c411f96b12608d8117d78",
+      "x": 1024,
+      "width": 1280,
+      "height": 1085,
+      "hidden": true
+    },
+    {
+      "id": "f3ad4100c8784a81af9e4f9f03be6739",
+      "sourceScreen": "projects/7252454012907680381/screens/f3ad4100c8784a81af9e4f9f03be6739",
+      "x": 2368,
+      "y": 8360,
+      "width": 1280,
+      "height": 1024
+    },
+    {
+      "id": "fe6892240f964b2bb88adb171ccd006f",
+      "sourceScreen": "projects/7252454012907680381/screens/fe6892240f964b2bb88adb171ccd006f",
+      "y": 11612,
+      "width": 390,
+      "height": 884
+    }
+  ],
+  "metadata": {
+    "userRole": "OWNER"
+  },
+  "projectId": "7252454012907680381"
+}

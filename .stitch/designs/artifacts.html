@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#131313",
+                        "surface-bright": "#3a3939",
+                        "secondary-fixed-dim": "#fcb5ad",
+                        "inverse-surface": "#e5e2e1",
+                        "primary-container": "#392700",
+                        "tertiary": "#d7c3b0",
+                        "inverse-primary": "#775a19",
+                        "secondary": "#fcb5ad",
+                        "on-tertiary-fixed": "#241a0e",
+                        "primary": "#e9c176",
+                        "surface-variant": "#353534",
+                        "inverse-on-surface": "#313030",
+                        "on-primary": "#412d00",
+                        "surface-container": "#201f1f",
+                        "secondary-fixed": "#ffdad6",
+                        "on-secondary": "#4f231f",
+                        "error-container": "#93000a",
+                        "background": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#131313",
+                        "on-tertiary": "#3a2e21",
+                        "tertiary-container": "#34281b",
+                        "surface-tint": "#e9c176",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary-container": "#a08e7d",
+                        "tertiary-fixed": "#f4dfcb",
+                        "on-secondary-fixed": "#350f0c",
+                        "on-surface-variant": "#d5c2c0",
+                        "surface-container-low": "#1c1b1b",
+                        "outline-variant": "#514442",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-highest": "#353534",
+                        "primary-fixed-dim": "#e9c176",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#6a3933",
+                        "tertiary-fixed-dim": "#d7c3b0",
+                        "primary-fixed": "#ffdea5",
+                        "on-tertiary-fixed-variant": "#524436",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-container": "#af8c47",
+                        "on-surface": "#e5e2e1",
+                        "on-error": "#690005",
+                        "secondary-container": "#6d3b36",
+                        "on-secondary-container": "#eca79f",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "on-primary-fixed": "#261900",
+                        "outline": "#9e8d8b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader"],
+                        "body": ["Noto Serif"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Noto Serif', serif;
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            grid-auto-rows: 20px;
+            gap: 2rem;
+        }
+        .artifact-card {
+            grid-row-end: span 25;
+        }
+        .artifact-card-tall {
+            grid-row-end: span 35;
+        }
+        .artifact-card-short {
+            grid-row-end: span 20;
+        }
+        .glass-overlay {
+            backdrop-filter: blur(20px);
+            background: rgba(53, 53, 52, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-surface select-none">
+<nav class="bg-[#131313] dark:bg-[#131313] font-['Newsreader'] tracking-tight text-on-surface docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-none bg-[#1c1b1b]">
+<div class="text-xl font-bold tracking-tighter text-[#e9c176]">THE OBSIDIAN ARCHIVE</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#e5e2e1]/60 hover:text-[#e9c176] transition-colors duration-300" href="#">Research</a>
+<a class="text-[#e9c176] border-b border-[#e9c176] pb-1 hover:text-[#e9c176] transition-colors duration-300" href="#">Artifacts</a>
+<a class="text-[#e5e2e1]/60 hover:text-[#e9c176] transition-colors duration-300" href="#">Library</a>
+<a class="text-[#e5e2e1]/60 hover:text-[#e9c176] transition-colors duration-300" href="#">Log</a>
+</div>
+<div class="flex items-center space-x-4">
+<div class="relative group">
+<span class="material-symbols-outlined text-[#e9c176] cursor-pointer">settings</span>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-8 py-16">
+<header class="mb-16 max-w-2xl">
+<h1 class="font-headline text-5xl md:text-7xl font-bold text-on-surface tracking-tighter leading-none mb-6">Cabinet of Curiosities</h1>
+<p class="font-body text-lg text-on-surface/70 italic leading-relaxed">
+                A forensic collection of neural phenomena, scattered across the digital workspace. Each item is a specimen of interpretability—a fragment of the ghost in the machine.
+            </p>
+</header>
+<div class="masonry-grid">
+<article class="artifact-card-tall flex flex-col bg-surface-container-highest p-8 relative group overflow-hidden transition-all duration-500 ease-in-out hover:bg-surface-variant">
+<div class="mb-auto">
+<div class="font-label text-[10px] tracking-[0.2em] text-primary/50 uppercase mb-4">[ARTIFACT_ID: NW-4092]</div>
+<h2 class="font-headline text-3xl text-primary mb-4">Neural Weights Mandala</h2>
+<p class="font-body text-on-surface/80 text-sm leading-relaxed mb-6">
+                        An interactive visualization of weight distributions across the 12th layer. Observed patterns suggest a crystalline structure in latent space navigation.
+                    </p>
+</div>
+<div class="w-full aspect-square bg-surface-dim mb-6 relative overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-700" data-alt="Intricate circular geometric pattern resembling a mandala made of glowing neural connection lines on a dark obsidian background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcNXf4BjCaaz7IYVtsGveF3NAygdxipn32G1M0MZ2UTvn8VdFGgAw3cNUZDOhoig0vIsninSrVYmsgco4-eCy66i0dE36QUUqxrkd3pERaf0I-t8wgrh8qYMHj5-FM0-yzGgpnptA33fQbmd3cm51HjXbDKg7rb6ocbOBNOxAlfrXcH1YUMCiVU-C__OY-guY589oLyAIsPPWGzEHCSnN_6nWV6cmw9fBfXYlyzU7FygMlvf11dgi86D2h633eiQZpKMwnI5o2CZ8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest via-transparent to-transparent"></div>
+</div>
+<div class="flex justify-between items-center mt-auto">
+<span class="font-label text-[10px] text-on-surface/40">[LATENT_DIMENSION: 768]</span>
+<button class="font-label text-xs uppercase tracking-widest text-primary hover:text-on-primary-container transition-colors">VIEW ARTIFACT</button>
+</div>
+</article>
+<article class="artifact-card flex flex-col bg-surface-container-highest p-8 relative group overflow-hidden transition-all duration-500 ease-in-out hover:bg-surface-variant">
+<div class="mb-auto">
+<div class="font-label text-[10px] tracking-[0.2em] text-primary/50 uppercase mb-4">[ARTIFACT_ID: CD-001]</div>
+<h2 class="font-headline text-3xl text-primary mb-4">The Circuit Discovery Desk</h2>
+<p class="font-body text-on-surface/80 text-sm leading-relaxed mb-6">
+                        A precision tool for mapping transformer circuits. Tracing the path of indirect object identification through the head hierarchy.
+                    </p>
+</div>
+<div class="w-full h-32 bg-surface-dim mb-6 relative overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity duration-700" data-alt="Macro photo of vintage electronic circuit components and glowing fiber optic cables in a dimly lit study atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeLm_Z1p-DHSe3Qw_TeWz-LaIXFkY3ySzV1hZ4XlaMnknRcxpkSMpBOdpvaaUW7lLj5dWOZqeQWkzUYhk3QE2eK_xV1Cl1TkLWVnGNHZ6Ov65yHqKdQV3wIsM2fbjntoWA3G4Y7P6j8lkQiEW31XapheUHman9EIDI-fiq34zTkU8h4O6FKXb3zQrk2oMt6NTFVqriQinFLJGHaZrqIw5yT_3vmSGf0evD1ISA328rDBP89hzAvvHZmaS5VmvvL5h4CXRARbnMlbU"/>
+</div>
+<div class="flex justify-between items-center mt-auto">
+<span class="font-label text-[10px] text-on-surface/40">[HEADS: 144]</span>
+<button class="font-label text-xs uppercase tracking-widest text-primary hover:text-on-primary-container transition-colors">VIEW ARTIFACT</button>
+</div>
+</article>
+<article class="artifact-card-tall flex flex-col bg-surface-container-highest p-8 relative group overflow-hidden transition-all duration-500 ease-in-out hover:bg-surface-variant">
+<div class="mb-auto">
+<div class="font-label text-[10px] tracking-[0.2em] text-primary/50 uppercase mb-4">[ARTIFACT_ID: AS-882]</div>
+<h2 class="font-headline text-3xl text-primary mb-4">Attention Head Sonification</h2>
+<p class="font-body text-on-surface/80 text-sm leading-relaxed mb-6">
+                        The sound of inference. Neural activation patterns translated into a deep, evolving ambient soundscape of mahogany and gold.
+                    </p>
+</div>
+<div class="flex-grow flex items-center justify-center my-6 space-x-1">
+<div class="w-1 h-12 bg-primary/20 rounded-full group-hover:h-16 transition-all duration-500"></div>
+<div class="w-1 h-24 bg-primary/40 rounded-full group-hover:h-20 transition-all duration-500"></div>
+<div class="w-1 h-32 bg-primary rounded-full group-hover:h-24 transition-all duration-500"></div>
+<div class="w-1 h-20 bg-primary/60 rounded-full group-hover:h-28 transition-all duration-500"></div>
+<div class="w-1 h-8 bg-primary/30 rounded-full group-hover:h-12 transition-all duration-500"></div>
+</div>
+<div class="flex justify-between items-center mt-auto">
+<span class="font-label text-[10px] text-on-surface/40">[FREQ: 432HZ]</span>
+<button class="font-label text-xs uppercase tracking-widest text-primary hover:text-on-primary-container transition-colors">VIEW ARTIFACT</button>
+</div>
+</article>
+<article class="artifact-card flex flex-col bg-surface-container-highest p-8 relative group overflow-hidden transition-all duration-500 ease-in-out hover:bg-surface-variant">
+<div class="mb-auto">
+<div class="font-label text-[10px] tracking-[0.2em] text-primary/50 uppercase mb-4">[ARTIFACT_ID: CG-77]</div>
+<h2 class="font-headline text-3xl text-primary mb-4">Conway's Forensic Game</h2>
+<p class="font-body text-on-surface/80 text-sm leading-relaxed mb-6">
+                        Cellular automata viewed through the lens of a forensic investigator. Decaying patterns and emergent logic within a constrained archive.
+                    </p>
+</div>
+<div class="grid grid-cols-6 gap-1 mb-6 opacity-40 group-hover:opacity-70 transition-opacity">
+<div class="aspect-square bg-primary/40"></div><div class="aspect-square bg-surface-dim"></div><div class="aspect-square bg-surface-dim"></div><div class="aspect-square bg-surface-dim"></div><div class="aspect-square bg-surface-dim"></div><div class="aspect-square bg-surface-dim"></div>
+<div class="aspect-square bg-surface-dim"></div><div class="aspect-square bg-primary/20"></div><div class="aspect-square bg-primary"></div><div class="aspect-square bg-surface-dim"></div><div class="aspect-square bg-surface-dim"></div><div class="aspect-square bg-surface-dim"></div>
+<div class="aspect-square bg-surface-dim"></div><div class="aspect-square bg-primary"></div><div class="aspect-square bg-primary/60"></div><div class="aspect-square bg-surface-dim"></div><div class="aspect-square bg-surface-dim"></div><div class="aspect-square bg-surface-dim"></div>
+<div class="aspect-square bg-surface-dim"></div><div class="aspect-square bg-surface-dim"></div><div class="aspect-square bg-surface-dim"></div><div class="aspect-square bg-surface-dim"></div><div class="aspect-square bg-surface-dim"></div><div class="aspect-square bg-surface-dim"></div>
+</div>
+<div class="flex justify-between items-center mt-auto">
+<span class="font-label text-[10px] text-on-surface/40">[ENTROPY: 0.84]</span>
+<button class="font-label text-xs uppercase tracking-widest text-primary hover:text-on-primary-container transition-colors">VIEW ARTIFACT</button>
+</div>
+</article>
+<article class="artifact-card-short flex flex-col bg-surface-container-highest p-8 relative group overflow-hidden transition-all duration-500 ease-in-out hover:bg-surface-variant">
+<div class="mb-auto">
+<div class="font-label text-[10px] tracking-[0.2em] text-primary/50 uppercase mb-4">[ARTIFACT_ID: MS-112]</div>
+<h2 class="font-headline text-3xl text-primary mb-4">Logit Lens Scope</h2>
+<p class="font-body text-on-surface/80 text-sm leading-relaxed mb-4">
+                        Peering through the hidden states to see the final vocabulary.
+                    </p>
+</div>
+<div class="flex justify-between items-center mt-auto">
+<span class="font-label text-[10px] text-on-surface/40">[DEPTH: LAYER_24]</span>
+<button class="font-label text-xs uppercase tracking-widest text-primary hover:text-on-primary-container transition-colors">VIEW ARTIFACT</button>
+</div>
+</article>
+</div>
+</main>
+<footer class="mt-32 px-8 py-12 border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0">
+<div class="max-w-md">
+<div class="text-lg font-headline font-bold text-primary mb-2">THE OBSIDIAN ARCHIVE</div>
+<p class="font-body text-xs text-on-surface/40 leading-relaxed italic">
+                    All findings are logged and verified within the forensic interpretability framework. Unauthorized access to latent dimensions is strictly monitored.
+                </p>
+</div>
+<div class="flex space-x-12">
+<div class="flex flex-col space-y-2">
+<span class="font-label text-[10px] text-primary/60 uppercase tracking-widest">Navigation</span>
+<a class="font-body text-xs text-on-surface/60 hover:text-primary" href="#">Journal</a>
+<a class="font-body text-xs text-on-surface/60 hover:text-primary" href="#">Index</a>
+</div>
+<div class="flex flex-col space-y-2">
+<span class="font-label text-[10px] text-primary/60 uppercase tracking-widest">Forensics</span>
+<a class="font-body text-xs text-on-surface/60 hover:text-primary" href="#">Protocol</a>
+<a class="font-body text-xs text-on-surface/60 hover:text-primary" href="#">Metadata</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 text-center">
+<span class="font-label text-[10px] text-on-surface/20 uppercase tracking-[0.4em]">Anno Domini MMXXIV • [SESSION_ACTIVE]</span>
+</div>
+</footer>
+</body></html>
