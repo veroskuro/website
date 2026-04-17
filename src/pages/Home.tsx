@@ -3,65 +3,105 @@ import profileData from '../content/data/profile.json';
 
 export default function Home() {
   return (
-    <div className="flex-grow max-w-7xl mx-auto px-6 md:px-12 py-12 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 mt-24">
-      {/* Left Column: The Portrait & The Marginalia */}
-      <div className="lg:col-span-4 flex flex-col gap-12">
-        <div className="relative w-full aspect-[3/4] bg-surface-container-low p-4">
-          <img 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDweU3Ic_TECFBoRccvuU__mRJHTTD9cLgbEjbh7cSYo7F7_Cmm5oNQc_BegryboV6K7ZZFfFRLCKPtwyRXKroO7_H12luPUCwmfrPNLCljcBICzKjQEolNXYn-56qchRVRnP0RbFOpbGMncVbFuBapjD3Y6WSURXSdOal59xrzcMf-78NumpehMljVcjmZ0HrJmaO_T_lxHrlBmHmX6CVEio_JwtlcWsQQO9l7wdDxy7SGv_-PNO4ZC7jjquHYqzYtP_20fYcScUs" 
-            alt={profileData.name} 
-            className="w-full h-full object-cover grayscale opacity-80 mix-blend-lighten" 
-          />
-          <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-surface to-transparent">
-            <h2 className="font-headline text-2xl text-primary mb-1">{profileData.name}</h2>
-            <p className="font-label text-sm text-on-surface opacity-70 uppercase tracking-widest">{profileData.title}</p>
-          </div>
-        </div>
+    <main className="bg-surface text-on-surface min-h-screen relative overflow-hidden flex flex-col justify-center py-24 md:py-32">
+      {/* Structural grid background for that sterile, forensic feel */}
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-[0.02] pointer-events-none z-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px)",
+          backgroundSize: "64px 64px",
+          backgroundPosition: "center center",
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 mt-12 md:mt-0">
         
-        <aside className="bg-surface-container-lowest p-6 border-l border-outline-variant/20 font-body text-sm italic text-on-surface opacity-80">
-          <p className="mb-4">{profileData.quote}</p>
-          <ul className="font-label not-italic text-xs text-secondary opacity-90 space-y-2 mt-6">
-            <li>[LOC] {profileData.docketCv.location}</li>
-            <li>[SPEC] {profileData.docketCv.specialty}</li>
-            <li>[EXP] {profileData.docketCv.experience}</li>
-          </ul>
-        </aside>
-      </div>
-
-      {/* Right Column: The Narrative */}
-      <div className="lg:col-span-8 flex flex-col gap-16">
-        <section className="max-w-prose">
-          <h1 className="font-headline text-5xl md:text-6xl text-primary tracking-tight mb-8 leading-tight">The Anatomy of a Deduction</h1>
-          <p className="font-body text-lg text-on-surface leading-relaxed mb-6">
-            Welcome to the private study. This archive serves as a repository for thoughts, methodologies, and case notes that span over a decade of forensic investigation. My work focuses on the intersection of historical texts and modern deductive reasoning.
-          </p>
-          <p className="font-body text-lg text-on-surface leading-relaxed mb-6">
-            Here, the sterile environment of the modern lab is replaced by the quiet contemplation of the archive. We do not just collect data; we seek the narrative hidden within the evidence. The patterns are always there, provided one knows how to look.
-          </p>
-          
-          <div className="mt-8 p-6 bg-surface-container border border-outline-variant/20 rounded-sm">
-            <h4 className="font-label text-sm text-primary uppercase tracking-widest mb-4">Navigating the Archive</h4>
-            <ul className="font-body text-sm text-on-surface-variant space-y-3">
-              <li><Link to="/investigation" className="text-primary hover:text-primary-container transition-colors"><strong className="text-on-surface hover:text-primary">Investigations:</strong></Link> Ongoing research projects — what I'm currently working on.</li>
-              <li><Link to="/field-notes" className="text-primary hover:text-primary-container transition-colors"><strong className="text-on-surface hover:text-primary">Field Notes:</strong></Link> Short, chronological logs of weekly findings and experiments.</li>
-              <li><Link to="/deductions" className="text-primary hover:text-primary-container transition-colors"><strong className="text-on-surface hover:text-primary">Deductions:</strong></Link> Long-form essays. On research, on thinking, on whatever.</li>
-              <li><Link to="/artifacts" className="text-primary hover:text-primary-container transition-colors"><strong className="text-on-surface hover:text-primary">Artifacts:</strong></Link> Tools and software I've built.</li>
-              <li><Link to="/dossier" className="text-primary hover:text-primary-container transition-colors"><strong className="text-on-surface hover:text-primary">Dossier:</strong></Link> Curriculum Vitae, academic record, and contact.</li>
-            </ul>
+        {/* Header Block */}
+        <header className="mb-16 md:mb-24">
+          <div className="flex items-center gap-4 mb-6">
+            <span className="w-12 h-px bg-primary opacity-50"></span>
+            <span className="font-label text-primary text-[10px] tracking-[0.3em] uppercase">
+              SYSTEM_INDEX // ROOT
+            </span>
           </div>
-        </section>
+          
+          <h1 className="font-headline text-5xl md:text-7xl lg:text-[7rem] leading-[0.9] text-on-surface tracking-tighter mb-8 max-w-5xl">
+            The Study.
+          </h1>
+        </header>
 
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+          
+          {/* Left Column: Portrait & Quote */}
+          <aside className="lg:col-span-4">
+            <div className="relative w-48 md:w-64 aspect-square border border-outline-variant/20 bg-surface-container-low p-2 mb-8">
+              {/* Corner markers */}
+              <span aria-hidden className="absolute -top-px -left-px w-2 h-2 border-t border-l border-outline-variant/40" />
+              <span aria-hidden className="absolute -top-px -right-px w-2 h-2 border-t border-r border-outline-variant/40" />
+              <span aria-hidden className="absolute -bottom-px -left-px w-2 h-2 border-b border-l border-outline-variant/40" />
+              <span aria-hidden className="absolute -bottom-px -right-px w-2 h-2 border-b border-r border-outline-variant/40" />
 
+              <img 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDweU3Ic_TECFBoRccvuU__mRJHTTD9cLgbEjbh7cSYo7F7_Cmm5oNQc_BegryboV6K7ZZFfFRLCKPtwyRXKroO7_H12luPUCwmfrPNLCljcBICzKjQEolNXYn-56qchRVRnP0RbFOpbGMncVbFuBapjD3Y6WSURXSdOal59xrzcMf-78NumpehMljVcjmZ0HrJmaO_T_lxHrlBmHmX6CVEio_JwtlcWsQQO9l7wdDxy7SGv_-PNO4ZC7jjquHYqzYtP_20fYcScUs" 
+                alt={profileData.name} 
+                className="w-full h-full object-cover grayscale opacity-70 mix-blend-lighten" 
+              />
+            </div>
+            
+            <p className="font-body text-base text-on-surface-variant leading-relaxed italic border-l-2 border-primary/30 pl-4 py-1">
+              {profileData.quote}
+            </p>
+          </aside>
 
-        <section className="flex flex-wrap items-center gap-6 mt-8">
-          <Link to="/dossier" className="inline-flex items-center justify-center px-8 py-4 bg-primary text-on-primary font-label uppercase tracking-widest text-sm hover:bg-primary-fixed transition-colors duration-300">
-            Commence Correspondence
-          </Link>
-          <Link to="/artifacts" className="inline-flex items-center justify-center px-8 py-4 border border-outline-variant text-on-surface font-label uppercase tracking-widest text-sm hover:bg-surface-container-high transition-colors duration-300">
-            Review Archive Index
-          </Link>
-        </section>
+          {/* Right Column: Navigation */}
+          <section className="lg:col-span-7 lg:col-start-6">
+            <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-8 pb-4 border-b border-outline-variant/20 flex items-center justify-between">
+              <span>Directory Access</span>
+              <span className="material-symbols-outlined text-sm opacity-50">folder_open</span>
+            </h2>
+
+            <div className="flex flex-col gap-4">
+              <Link to="/investigation" className="group flex flex-col md:flex-row md:items-center gap-2 md:gap-8 p-6 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all">
+                <span className="font-label text-xs tracking-widest uppercase text-primary w-32">Investigations</span>
+                <span className="font-body text-lg text-on-surface-variant group-hover:text-on-surface transition-colors">
+                  Ongoing research projects — active cases.
+                </span>
+              </Link>
+
+              <Link to="/field-notes" className="group flex flex-col md:flex-row md:items-center gap-2 md:gap-8 p-6 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all">
+                <span className="font-label text-xs tracking-widest uppercase text-primary w-32">Field Notes</span>
+                <span className="font-body text-lg text-on-surface-variant group-hover:text-on-surface transition-colors">
+                  Short, chronological logs of weekly experiments.
+                </span>
+              </Link>
+
+              <Link to="/deductions" className="group flex flex-col md:flex-row md:items-center gap-2 md:gap-8 p-6 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all">
+                <span className="font-label text-xs tracking-widest uppercase text-primary w-32">Deductions</span>
+                <span className="font-body text-lg text-on-surface-variant group-hover:text-on-surface transition-colors">
+                  Long-form essays and comprehensive analyses.
+                </span>
+              </Link>
+
+              <Link to="/artifacts" className="group flex flex-col md:flex-row md:items-center gap-2 md:gap-8 p-6 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all">
+                <span className="font-label text-xs tracking-widest uppercase text-primary w-32">Artifacts</span>
+                <span className="font-body text-lg text-on-surface-variant group-hover:text-on-surface transition-colors">
+                  Tools, infrastructure, and software builds.
+                </span>
+              </Link>
+
+              <Link to="/dossier" className="group flex flex-col md:flex-row md:items-center gap-2 md:gap-8 p-6 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all">
+                <span className="font-label text-xs tracking-widest uppercase text-primary w-32">Dossier</span>
+                <span className="font-body text-lg text-on-surface-variant group-hover:text-on-surface transition-colors">
+                  Personnel file, academic record, and secure comms.
+                </span>
+              </Link>
+            </div>
+          </section>
+
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
