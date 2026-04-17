@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import siteSettings from '../../content/data/settings.json';
 import profileData from '../../content/data/profile.json';
 
@@ -12,6 +13,12 @@ export default function Footer() {
             {siteSettings.footerText}
           </p>
         </div>
+
+        <nav className="flex flex-wrap justify-center gap-8 font-label text-xs uppercase tracking-widest mt-2">
+          <Link to="/now" className="text-on-surface opacity-50 hover:opacity-100 hover:text-primary transition-all duration-300">
+            /now
+          </Link>
+        </nav>
 
         <div className="flex flex-wrap justify-center gap-6 mt-2">
           <a href={`mailto:${profileData.contact.email}`} className="text-primary hover:text-primary-container transition-colors flex items-center gap-2 font-label text-xs uppercase tracking-wider">
