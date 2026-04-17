@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import siteSettings from '../../content/data/settings.json';
 import profileData from '../../content/data/profile.json';
 
