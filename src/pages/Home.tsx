@@ -18,29 +18,34 @@ export default function Home() {
 
       <div className="max-w-5xl mx-auto px-6 md:px-12 w-full relative z-10 mt-12 md:mt-0">
         
-        {/* Centered Hero: Portrait + Title */}
-        <header className="flex flex-col items-center text-center mb-16 md:mb-24">
-          <div className="relative w-36 md:w-48 aspect-square border border-outline-variant/20 bg-surface-container-low p-2 mb-8">
-            {/* Corner markers */}
-            <span aria-hidden className="absolute -top-px -left-px w-2 h-2 border-t border-l border-outline-variant/40" />
-            <span aria-hidden className="absolute -top-px -right-px w-2 h-2 border-t border-r border-outline-variant/40" />
-            <span aria-hidden className="absolute -bottom-px -left-px w-2 h-2 border-b border-l border-outline-variant/40" />
-            <span aria-hidden className="absolute -bottom-px -right-px w-2 h-2 border-b border-r border-outline-variant/40" />
+        {/* Header: Title + Portrait side by side */}
+        <header className="mb-16 md:mb-24">
+          <div className="flex flex-col-reverse md:flex-row md:items-end md:justify-between gap-8 md:gap-16">
+            
+            {/* Left: Title + Tagline */}
+            <div className="flex-1">
+              <h1 className="font-headline text-5xl md:text-7xl lg:text-[7rem] leading-[0.9] text-on-surface tracking-tighter mb-6">
+                The Study.
+              </h1>
+              <p className="font-body text-base md:text-lg text-on-surface-variant leading-relaxed italic max-w-lg">
+                {profileData.tagline}
+              </p>
+            </div>
 
-            <img 
-              src="/portrait.png" 
-              alt={profileData.name} 
-              className="w-full h-full object-cover grayscale opacity-70 mix-blend-lighten" 
-            />
+            {/* Right: Portrait */}
+            <div className="relative w-28 md:w-40 aspect-square border border-outline-variant/20 bg-surface-container-low p-1.5 shrink-0">
+              <span aria-hidden className="absolute -top-px -left-px w-2 h-2 border-t border-l border-outline-variant/40" />
+              <span aria-hidden className="absolute -top-px -right-px w-2 h-2 border-t border-r border-outline-variant/40" />
+              <span aria-hidden className="absolute -bottom-px -left-px w-2 h-2 border-b border-l border-outline-variant/40" />
+              <span aria-hidden className="absolute -bottom-px -right-px w-2 h-2 border-b border-r border-outline-variant/40" />
+
+              <img 
+                src="/portrait.png" 
+                alt={profileData.name} 
+                className="w-full h-full object-cover grayscale opacity-80" 
+              />
+            </div>
           </div>
-          
-          <h1 className="font-headline text-5xl md:text-7xl lg:text-[7rem] leading-[0.9] text-on-surface tracking-tighter mb-6">
-            The Study.
-          </h1>
-          
-          <p className="font-body text-base md:text-lg text-on-surface-variant leading-relaxed italic max-w-xl">
-            {profileData.quote}
-          </p>
         </header>
 
         {/* Directory Navigation */}
