@@ -1,6 +1,4 @@
-
-
-import { detectiveProfile } from '../data/siteData';
+import profileData from '../content/data/profile.json';
 
 export default function Home() {
   return (
@@ -10,21 +8,21 @@ export default function Home() {
         <div className="relative w-full aspect-[3/4] bg-surface-container-low p-4">
           <img 
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDweU3Ic_TECFBoRccvuU__mRJHTTD9cLgbEjbh7cSYo7F7_Cmm5oNQc_BegryboV6K7ZZFfFRLCKPtwyRXKroO7_H12luPUCwmfrPNLCljcBICzKjQEolNXYn-56qchRVRnP0RbFOpbGMncVbFuBapjD3Y6WSURXSdOal59xrzcMf-78NumpehMljVcjmZ0HrJmaO_T_lxHrlBmHmX6CVEio_JwtlcWsQQO9l7wdDxy7SGv_-PNO4ZC7jjquHYqzYtP_20fYcScUs" 
-            alt={detectiveProfile.name} 
+            alt={profileData.name} 
             className="w-full h-full object-cover grayscale opacity-80 mix-blend-lighten" 
           />
           <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-surface to-transparent">
-            <h2 className="font-headline text-2xl text-primary mb-1">{detectiveProfile.name}</h2>
-            <p className="font-label text-sm text-on-surface opacity-70 uppercase tracking-widest">{detectiveProfile.title}</p>
+            <h2 className="font-headline text-2xl text-primary mb-1">{profileData.name}</h2>
+            <p className="font-label text-sm text-on-surface opacity-70 uppercase tracking-widest">{profileData.title}</p>
           </div>
         </div>
         
         <aside className="bg-surface-container-lowest p-6 border-l border-outline-variant/20 font-body text-sm italic text-on-surface opacity-80">
-          <p className="mb-4">{detectiveProfile.quote}</p>
+          <p className="mb-4">{profileData.quote}</p>
           <ul className="font-label not-italic text-xs text-secondary opacity-90 space-y-2 mt-6">
-            <li>[LOC] {detectiveProfile.docketCv.location}</li>
-            <li>[SPEC] {detectiveProfile.docketCv.specialty}</li>
-            <li>[EXP] {detectiveProfile.docketCv.experience}</li>
+            <li>[LOC] {profileData.docketCv.location}</li>
+            <li>[SPEC] {profileData.docketCv.specialty}</li>
+            <li>[EXP] {profileData.docketCv.experience}</li>
           </ul>
         </aside>
       </div>

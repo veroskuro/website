@@ -1,0 +1,7 @@
+{
+  "id": "SAE-882",
+  "title": "SAE Feature Engine",
+  "description": "Training and serving platform for sparse autoencoder features. Dual-indexed storage — PostgreSQL for metadata, Qdrant for high-dimensional cosine similarity. Ghost-gradient recovery for dead features, LLM-assisted monosemantic labeling, REST API for downstream consumers.",
+  "metadata": "[INDEX: PG + QDRANT]",
+  "spanType": "tall"
+}

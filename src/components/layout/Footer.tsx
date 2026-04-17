@@ -1,13 +1,16 @@
-
 import { Link } from 'react-router-dom';
-import { siteMetadata } from '../../data/siteData';
+import siteSettings from '../../content/data/settings.json';
 
 export default function Footer() {
   return (
-    <footer className="w-full py-12 mt-24 bg-surface-container-low border-t border-outline-variant/20 relative z-10">
-      <div className="flex flex-col items-center gap-6 w-full max-w-7xl mx-auto px-12">
-        <div className="text-lg font-headline tracking-tighter text-on-surface">
-          {siteMetadata.title}
+    <footer className="w-full bg-surface-container-lowest border-t border-outline-variant/10 py-12 px-8 mt-auto">
+      <div className="max-w-screen-2xl mx-auto flex flex-col items-center gap-8 text-center">
+        
+        <div className="max-w-xl">
+          <h4 className="font-headline text-2xl text-primary tracking-tight mb-4">{siteSettings.title}</h4>
+          <p className="font-body text-sm text-on-surface-variant leading-relaxed italic">
+            {siteSettings.footerText}
+          </p>
         </div>
         
         <nav className="flex flex-wrap justify-center gap-8 font-label text-xs uppercase tracking-widest">
@@ -22,9 +25,8 @@ export default function Footer() {
           </a>
         </nav>
         
-        <div className="font-label text-xs uppercase tracking-widest text-on-surface opacity-50 mt-4 text-center max-w-2xl">
-          <p className="mb-4">{siteMetadata.footerText}</p>
-          <p>© MMXIV-MMXXIV The Forensic Archive • All Deductions Reserved</p>
+        <div className="font-label text-xs uppercase tracking-widest text-on-surface opacity-30 mt-4">
+          <p>© MMXIV-MMXXVI The Forensic Archive • All Deductions Reserved</p>
         </div>
       </div>
     </footer>

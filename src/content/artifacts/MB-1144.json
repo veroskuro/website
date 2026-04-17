@@ -1,0 +1,8 @@
+{
+  "id": "MB-1144",
+  "title": "Cross-Lingual Sentiment Circuits",
+  "description": "Activation patching across all 144 components of mBERT on English, Hindi, and Hinglish sentiment. Tests five competing hypotheses — from abstract universality to English-script geometry to polysemantic interference. Paper targeting ICML 2026 MI Workshop.",
+  "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCcNXf4BjCaaz7IYVtsGveF3NAygdxipn32G1M0MZ2UTvn8VdFGgAw3cNUZDOhoig0vIsninSrVYmsgco4-eCy66i0dE36QUUqxrkd3pERaf0I-t8wgrh8qYMHj5-FM0-yzGgpnptA33fQbmd3cm51HjXbDKg7rb6ocbOBNOxAlfrXcH1YUMCiVU-C__OY-guY589oLyAIsPPWGzEHCSnN_6nWV6cmw9fBfXYlyzU7FygMlvf11dgi86D2h633eiQZpKMwnI5o2CZ8",
+  "metadata": "[COMPONENTS: 144 | LANGS: EN/HI/HIN]",
+  "spanType": "tall"
+}

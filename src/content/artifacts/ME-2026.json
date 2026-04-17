@@ -1,0 +1,7 @@
+{
+  "id": "ME-2026",
+  "title": "mechinterp-env",
+  "description": "The first RL environment for mechanistic interpretability debugging. Agents localize circuits in toy transformers using activation patching, head ablation, and logit lens. Ground-truth circuits mean every score is provably correct. Deployed to Hugging Face Spaces for OpenEnv Hackathon 2026.",
+  "metadata": "[ACTIONS: PATCH/ABLATE/LENS]",
+  "spanType": "short"
+}
