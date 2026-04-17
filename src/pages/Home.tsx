@@ -33,7 +33,7 @@ export default function Home() {
             </div>
 
             {/* Right: Portrait */}
-            <div className="relative w-28 md:w-40 aspect-square border border-outline-variant/20 bg-surface-container-low p-1.5 shrink-0">
+            <div className="relative w-32 md:w-48 aspect-square border border-outline-variant/20 bg-surface-container-low p-1.5 shrink-0">
               <span aria-hidden className="absolute -top-px -left-px w-2 h-2 border-t border-l border-outline-variant/40" />
               <span aria-hidden className="absolute -top-px -right-px w-2 h-2 border-t border-r border-outline-variant/40" />
               <span aria-hidden className="absolute -bottom-px -left-px w-2 h-2 border-b border-l border-outline-variant/40" />
@@ -42,7 +42,7 @@ export default function Home() {
               <img 
                 src="/portrait.png" 
                 alt={profileData.name} 
-                className="w-full h-full object-cover grayscale opacity-80" 
+                className="w-full h-full object-cover" 
               />
             </div>
           </div>
