@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import profileData from '../content/data/profile.json';
 
 export default function Home() {
@@ -34,9 +35,20 @@ export default function Home() {
           <p className="font-body text-lg text-on-surface leading-relaxed mb-6">
             Welcome to the private study. This archive serves as a repository for thoughts, methodologies, and case notes that span over a decade of forensic investigation. My work focuses on the intersection of historical texts and modern deductive reasoning.
           </p>
-          <p className="font-body text-lg text-on-surface leading-relaxed">
+          <p className="font-body text-lg text-on-surface leading-relaxed mb-6">
             Here, the sterile environment of the modern lab is replaced by the quiet contemplation of the archive. We do not just collect data; we seek the narrative hidden within the evidence. The patterns are always there, provided one knows how to look.
           </p>
+          
+          <div className="mt-8 p-6 bg-surface-container border border-outline-variant/20 rounded-sm">
+            <h4 className="font-label text-sm text-primary uppercase tracking-widest mb-4">Navigating the Archive</h4>
+            <ul className="font-body text-sm text-on-surface-variant space-y-3">
+              <li><strong className="text-on-surface">Investigations:</strong> Deep dives into current and past research projects.</li>
+              <li><strong className="text-on-surface">Lab Notes:</strong> Short, chronological logs of daily findings and experiments.</li>
+              <li><strong className="text-on-surface">Deductions:</strong> Long-form technical essays and blog posts.</li>
+              <li><strong className="text-on-surface">Artifacts:</strong> Custom software tools and visualizations we've built.</li>
+              <li><strong className="text-on-surface">Dossier:</strong> Curriculum Vitae, academic record, and contact protocols.</li>
+            </ul>
+          </div>
         </section>
 
         <section className="bg-surface-container-low p-8 lg:p-12">
@@ -76,12 +88,12 @@ export default function Home() {
         </section>
 
         <section className="flex flex-wrap items-center gap-6 mt-8">
-          <a href="/detective" className="inline-flex items-center justify-center px-8 py-4 bg-primary text-on-primary font-label uppercase tracking-widest text-sm hover:bg-primary-fixed transition-colors duration-300">
+          <Link to="/detective" className="inline-flex items-center justify-center px-8 py-4 bg-primary text-on-primary font-label uppercase tracking-widest text-sm hover:bg-primary-fixed transition-colors duration-300">
             Commence Correspondence
-          </a>
-          <a href="/artifacts" className="inline-flex items-center justify-center px-8 py-4 border border-outline-variant text-on-surface font-label uppercase tracking-widest text-sm hover:bg-surface-container-high transition-colors duration-300">
+          </Link>
+          <Link to="/artifacts" className="inline-flex items-center justify-center px-8 py-4 border border-outline-variant text-on-surface font-label uppercase tracking-widest text-sm hover:bg-surface-container-high transition-colors duration-300">
             Review Archive Index
-          </a>
+          </Link>
         </section>
       </div>
     </div>

@@ -14,15 +14,15 @@ export default function Footer() {
         </div>
         
         <nav className="flex flex-wrap justify-center gap-8 font-label text-xs uppercase tracking-widest">
-          <Link to="/" className="text-on-surface opacity-50 hover:opacity-100 hover:text-primary transition-all duration-300">
+          <Link to="/artifacts" className="text-on-surface opacity-50 hover:opacity-100 hover:text-primary transition-all duration-300">
             Archive Index
           </Link>
           <Link to="/detective" className="text-on-surface opacity-50 hover:opacity-100 hover:text-primary transition-all duration-300">
             Contact the Detective
           </Link>
-          <a href="#" className="text-on-surface opacity-50 hover:opacity-100 hover:text-primary transition-all duration-300">
+          <Link to="/" className="text-on-surface opacity-50 hover:opacity-100 hover:text-primary transition-all duration-300">
             Confidentiality Policy
-          </a>
+          </Link>
         </nav>
         
         <div className="font-label text-xs uppercase tracking-widest text-on-surface opacity-30 mt-4">
