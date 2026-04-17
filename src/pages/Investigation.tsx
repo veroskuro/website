@@ -26,7 +26,7 @@ export default function Investigation() {
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
         
         {/* Contextual Sidebar / Marginalia */}
-        <aside className="lg:col-span-3 bg-surface-container-lowest p-6 flex flex-col gap-8 order-2 lg:order-1 h-full sticky top-32">
+        <aside className="lg:col-span-3 bg-surface-container-lowest p-6 flex flex-col gap-8 order-2 lg:order-1 h-full lg:sticky lg:top-32">
           <div className="flex flex-col gap-2">
             <span className="font-label text-xs uppercase tracking-[0.2em] text-outline">Active Inquiry</span>
             <span className="font-label text-sm text-on-surface">[CASE_ID: {activeCase.attributes.case_id}]</span>

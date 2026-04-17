@@ -28,8 +28,8 @@ export default function FieldNotes() {
   });
 
   return (
-    <div className="flex-grow max-w-7xl mx-auto px-12 w-full mt-24 grid grid-cols-1 md:grid-cols-12 gap-16">
-      <aside className="md:col-span-3 flex flex-col gap-12 pt-4">
+    <div className="flex-grow max-w-7xl mx-auto px-6 md:px-12 w-full mt-24 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+      <aside className="md:col-span-3 flex flex-col gap-8 md:gap-12 pt-4">
         <div className="bg-surface-container-lowest p-6 flex flex-col gap-4">
           <h3 className="font-headline text-xl text-primary italic tracking-tight">Active Registries</h3>
           <p className="font-body text-sm italic text-on-surface-variant leading-relaxed">
@@ -59,7 +59,7 @@ export default function FieldNotes() {
         </header>
 
         {filteredNotes.map((note) => (
-          <article key={note.slug} className="bg-surface-container-low p-10 hover:bg-surface-container-highest transition-colors duration-500 group relative overflow-hidden flex flex-col md:flex-row gap-8 items-start">
+          <article key={note.slug} className="bg-surface-container-low p-6 md:p-10 hover:bg-surface-container-highest transition-colors duration-500 group relative overflow-hidden flex flex-col md:flex-row gap-6 md:gap-8 items-start">
             <div className="absolute top-0 right-0 p-6 flex items-center gap-2">
               <span className={`w-2 h-2 rounded-full ${note.attributes.status === 'ACTIVE' ? 'bg-primary animate-pulse' : note.attributes.status === 'PENDING' ? 'bg-secondary' : 'bg-outline-variant'}`}></span>
               <span className={`font-label text-xs tracking-widest ${note.attributes.status === 'ACTIVE' ? 'text-primary' : note.attributes.status === 'PENDING' ? 'text-secondary' : 'text-outline-variant'}`}>

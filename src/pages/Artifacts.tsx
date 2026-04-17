@@ -29,7 +29,7 @@ export default function Artifacts() {
       </header>
 
       {/* Masonry-style Grid */}
-      <div className="columns-1 lg:columns-2 gap-12 space-y-12 w-full">
+      <div className="columns-1 lg:columns-2 gap-8 md:gap-12 space-y-8 md:space-y-12 w-full">
         {artifacts.map((artifact) => (
           <article 
             key={artifact.id} 
@@ -46,7 +46,7 @@ export default function Artifacts() {
               </div>
             )}
             
-            <div className="p-8 flex flex-col flex-grow">
+            <div className="p-6 md:p-8 flex flex-col flex-grow">
               <div className="flex justify-between items-start mb-4">
                 <span className="font-label text-xs tracking-widest uppercase text-secondary bg-secondary/10 px-2 py-1">
                   {artifact.id}
