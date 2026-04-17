@@ -20,7 +20,6 @@
   "tagline": "Reverse-Engineering the Silence Between Activations",
   "docketCv": {
     "researcherId": "0x8873",
-    "status": "ACTIVE_RESEARCHER",
     "location": "Greater Noida, IN",
     "specialty": "Mechanistic Interpretability",
     "experience": "B.Tech CSE (AI/ML) — Class of 2027"
@@ -31,7 +30,7 @@
       "institution": "Bennett University, Greater Noida (Class of 2027)"
     },
     {
-      "degree": "Research supervisor: Dr. Kaliyar",
+      "degree": "Undergraduate Researcher",
       "institution": "Mechanistic Interpretability in Multilingual Transformers"
     }
   ],

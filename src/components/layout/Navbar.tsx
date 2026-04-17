@@ -68,9 +68,9 @@ export default function Navbar() {
             ARTIFACTS
           </Link>
           <Link 
-            to="/detective" 
+            to="/dossier" 
             className={`font-headline tracking-tight uppercase text-sm transition-all duration-300 ${
-              isActive('/detective') ? 'text-primary border-b border-primary pb-1' : 'text-on-surface opacity-70 hover:text-primary hover:opacity-100'
+              isActive('/dossier') ? 'text-primary border-b border-primary pb-1' : 'text-on-surface opacity-70 hover:text-primary hover:opacity-100'
             }`}
           >
             DOSSIER
@@ -121,9 +121,9 @@ export default function Navbar() {
             Artifacts
           </Link>
           <Link 
-            to="/detective" 
+            to="/dossier" 
             onClick={() => setIsMobileMenuOpen(false)}
-            className={`font-headline tracking-tight uppercase text-lg ${isActive('/detective') ? 'text-primary' : 'text-on-surface'}`}
+            className={`font-headline tracking-tight uppercase text-lg ${isActive('/dossier') ? 'text-primary' : 'text-on-surface'}`}
           >
             Dossier
           </Link>

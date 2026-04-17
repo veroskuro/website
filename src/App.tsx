@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
-import Detective from './pages/Detective';
+import Dossier from './pages/Dossier';
 import Artifacts from './pages/Artifacts';
 import Deductions from './pages/Deductions';
 import DeductionPost from './pages/DeductionPost';
@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="detective" element={<Detective />} />
+          <Route path="dossier" element={<Dossier />} />
           <Route path="artifacts" element={<Artifacts />} />
           <Route path="deductions" element={<Deductions />} />
           <Route path="deductions/:slug" element={<DeductionPost />} />

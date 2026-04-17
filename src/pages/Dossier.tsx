@@ -1,6 +1,6 @@
 import profileData from "../content/data/profile.json";
 
-export default function Detective() {
+export default function Dossier() {
   return (
     <main className="bg-surface text-on-surface min-h-screen relative overflow-hidden flex flex-col justify-center py-24 md:py-32">
       {/* Structural grid background for that sterile, forensic feel */}
@@ -26,9 +26,9 @@ export default function Detective() {
             </span>
           </div>
           
-          <h1 className="font-headline text-5xl md:text-8xl lg:text-[8rem] leading-[0.9] text-on-surface tracking-tighter mb-8">
-            Deven <br className="hidden md:block" />
-            <span className="text-primary italic pr-4">Choudhary.</span>
+          <h1 className="font-headline text-[3.5rem] md:text-7xl lg:text-[7.5rem] leading-[0.9] text-on-surface tracking-tighter mb-8">
+            Mechanistic <br className="hidden md:block" />
+            <span className="text-primary italic pr-4">Interpretability.</span>
           </h1>
           
           <p className="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed">
@@ -96,14 +96,10 @@ export default function Detective() {
                 <span className="material-symbols-outlined text-sm opacity-50">tune</span>
               </h2>
               
-              <div className="grid grid-cols-2 gap-8 mb-8">
+              <div className="grid grid-cols-1 gap-8 mb-8">
                 <div>
                   <span className="block font-label text-[10px] text-outline tracking-widest uppercase mb-2">Location</span>
                   <span className="font-body text-lg text-on-surface">{profileData.docketCv.location}</span>
-                </div>
-                <div>
-                  <span className="block font-label text-[10px] text-outline tracking-widest uppercase mb-2">Status</span>
-                  <span className="font-body text-lg text-primary">{profileData.docketCv.status}</span>
                 </div>
               </div>
 

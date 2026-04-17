@@ -18,7 +18,7 @@ export default function Footer() {
           <Link to="/artifacts" className="text-on-surface opacity-50 hover:opacity-100 hover:text-primary transition-all duration-300">
             Archive Index
           </Link>
-          <Link to="/detective" className="text-on-surface opacity-50 hover:opacity-100 hover:text-primary transition-all duration-300">
+          <Link to="/dossier" className="text-on-surface opacity-50 hover:opacity-100 hover:text-primary transition-all duration-300">
             Contact the Detective
           </Link>
           <Link to="/now" className="text-on-surface opacity-50 hover:opacity-100 hover:text-primary transition-all duration-300">

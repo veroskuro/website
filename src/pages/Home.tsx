@@ -46,7 +46,7 @@ export default function Home() {
               <li><Link to="/field-notes" className="text-primary hover:text-primary-container transition-colors"><strong className="text-on-surface hover:text-primary">Field Notes:</strong></Link> Short, chronological logs of weekly findings and experiments.</li>
               <li><Link to="/deductions" className="text-primary hover:text-primary-container transition-colors"><strong className="text-on-surface hover:text-primary">Deductions:</strong></Link> Long-form essays. On research, on thinking, on whatever.</li>
               <li><Link to="/artifacts" className="text-primary hover:text-primary-container transition-colors"><strong className="text-on-surface hover:text-primary">Artifacts:</strong></Link> Tools and software I've built.</li>
-              <li><Link to="/detective" className="text-primary hover:text-primary-container transition-colors"><strong className="text-on-surface hover:text-primary">Dossier:</strong></Link> Curriculum Vitae, academic record, and contact.</li>
+              <li><Link to="/dossier" className="text-primary hover:text-primary-container transition-colors"><strong className="text-on-surface hover:text-primary">Dossier:</strong></Link> Curriculum Vitae, academic record, and contact.</li>
             </ul>
           </div>
         </section>
@@ -54,7 +54,7 @@ export default function Home() {
 
 
         <section className="flex flex-wrap items-center gap-6 mt-8">
-          <Link to="/detective" className="inline-flex items-center justify-center px-8 py-4 bg-primary text-on-primary font-label uppercase tracking-widest text-sm hover:bg-primary-fixed transition-colors duration-300">
+          <Link to="/dossier" className="inline-flex items-center justify-center px-8 py-4 bg-primary text-on-primary font-label uppercase tracking-widest text-sm hover:bg-primary-fixed transition-colors duration-300">
             Commence Correspondence
           </Link>
           <Link to="/artifacts" className="inline-flex items-center justify-center px-8 py-4 border border-outline-variant text-on-surface font-label uppercase tracking-widest text-sm hover:bg-surface-container-high transition-colors duration-300">
