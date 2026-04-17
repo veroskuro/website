@@ -128,13 +128,13 @@ export default function Dossier() {
               <div className="flex flex-col gap-4">
                 <a 
                   href={`mailto:${profileData.contact.email}`} 
-                  className="flex items-center justify-between p-4 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all group"
+                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 p-4 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all group"
                 >
-                  <div className="flex items-center gap-4">
-                    <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">mail</span>
-                    <span className="font-body text-lg text-on-surface">{profileData.contact.email}</span>
+                  <div className="flex items-center gap-4 min-w-0">
+                    <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors shrink-0">mail</span>
+                    <span className="font-body text-base md:text-lg text-on-surface truncate">{profileData.contact.email}</span>
                   </div>
-                  <span className="font-label text-[10px] tracking-widest uppercase text-outline group-hover:text-primary transition-colors">
+                  <span className="font-label text-[10px] tracking-widest uppercase text-outline group-hover:text-primary transition-colors shrink-0 pl-10 sm:pl-0">
                     Dispatch
                   </span>
                 </a>
@@ -143,13 +143,13 @@ export default function Dossier() {
                   href={profileData.contact.github} 
                   target="_blank" 
                   rel="noreferrer"
-                  className="flex items-center justify-between p-4 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all group"
+                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 p-4 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all group"
                 >
-                  <div className="flex items-center gap-4">
-                    <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">code</span>
-                    <span className="font-body text-lg text-on-surface">@veroskuro</span>
+                  <div className="flex items-center gap-4 min-w-0">
+                    <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors shrink-0">code</span>
+                    <span className="font-body text-base md:text-lg text-on-surface">@veroskuro</span>
                   </div>
-                  <span className="font-label text-[10px] tracking-widest uppercase text-outline group-hover:text-primary transition-colors">
+                  <span className="font-label text-[10px] tracking-widest uppercase text-outline group-hover:text-primary transition-colors shrink-0 pl-10 sm:pl-0">
                     Access
                   </span>
                 </a>
