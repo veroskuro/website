@@ -36,7 +36,7 @@ export default function Footer() {
           <a href={`https://github.com${profileData.contact.github}`} target="_blank" rel="noreferrer" className="text-on-surface opacity-80 hover:opacity-100 hover:text-primary transition-colors flex items-center gap-2 font-label text-xs uppercase tracking-wider">
             <span className="material-symbols-outlined text-sm">code</span> GitHub
           </a>
-          <a href="https://x.com/deven_choudhary" target="_blank" rel="noreferrer" className="text-on-surface opacity-80 hover:opacity-100 hover:text-primary transition-colors flex items-center gap-2 font-label text-xs uppercase tracking-wider">
+          <a href="https://x.com/veroskuro" target="_blank" rel="noreferrer" className="text-on-surface opacity-80 hover:opacity-100 hover:text-primary transition-colors flex items-center gap-2 font-label text-xs uppercase tracking-wider">
             <span className="material-symbols-outlined text-sm">public</span> Twitter
           </a>
         </div>

@@ -42,50 +42,16 @@ export default function Home() {
           <div className="mt-8 p-6 bg-surface-container border border-outline-variant/20 rounded-sm">
             <h4 className="font-label text-sm text-primary uppercase tracking-widest mb-4">Navigating the Archive</h4>
             <ul className="font-body text-sm text-on-surface-variant space-y-3">
-              <li><strong className="text-on-surface">Investigations:</strong> Ongoing research projects — what I'm currently working on.</li>
-              <li><strong className="text-on-surface">Field Notes:</strong> Short, chronological logs of weekly findings and experiments.</li>
-              <li><strong className="text-on-surface">Deductions:</strong> Long-form essays. On research, on thinking, on whatever.</li>
-              <li><strong className="text-on-surface">Artifacts:</strong> Tools and software I've built.</li>
-              <li><strong className="text-on-surface">Dossier:</strong> Curriculum Vitae, academic record, and contact.</li>
+              <li><Link to="/investigation" className="text-primary hover:text-primary-container transition-colors"><strong className="text-on-surface hover:text-primary">Investigations:</strong></Link> Ongoing research projects — what I'm currently working on.</li>
+              <li><Link to="/field-notes" className="text-primary hover:text-primary-container transition-colors"><strong className="text-on-surface hover:text-primary">Field Notes:</strong></Link> Short, chronological logs of weekly findings and experiments.</li>
+              <li><Link to="/deductions" className="text-primary hover:text-primary-container transition-colors"><strong className="text-on-surface hover:text-primary">Deductions:</strong></Link> Long-form essays. On research, on thinking, on whatever.</li>
+              <li><Link to="/artifacts" className="text-primary hover:text-primary-container transition-colors"><strong className="text-on-surface hover:text-primary">Artifacts:</strong></Link> Tools and software I've built.</li>
+              <li><Link to="/detective" className="text-primary hover:text-primary-container transition-colors"><strong className="text-on-surface hover:text-primary">Dossier:</strong></Link> Curriculum Vitae, academic record, and contact.</li>
             </ul>
           </div>
         </section>
 
-        <section className="bg-surface-container-low p-8 lg:p-12">
-          <h3 className="font-headline text-3xl text-on-surface mb-8">Areas of Obsession</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="border-l border-primary/30 pl-6">
-              <h4 className="font-label text-primary uppercase tracking-widest text-sm mb-3 flex items-center gap-2">
-                <span className="material-symbols-outlined text-sm">fingerprint</span>
-                Trace Evidence
-              </h4>
-              <p className="font-body text-on-surface opacity-80 text-sm leading-relaxed">
-                The microscopic whispers left behind. Analyzing particulate matter to reconstruct timelines with devastating accuracy.
-              </p>
-            </div>
-            
-            <div className="border-l border-primary/30 pl-6">
-              <h4 className="font-label text-primary uppercase tracking-widest text-sm mb-3 flex items-center gap-2">
-                <span className="material-symbols-outlined text-sm">history_edu</span>
-                Document Analysis
-              </h4>
-              <p className="font-body text-on-surface opacity-80 text-sm leading-relaxed">
-                Forged signatures, obscured inks, and the subtle impressions on the page beneath. The paper always remembers.
-              </p>
-            </div>
-            
-            <div className="border-l border-primary/30 pl-6">
-              <h4 className="font-label text-primary uppercase tracking-widest text-sm mb-3 flex items-center gap-2">
-                <span className="material-symbols-outlined text-sm">psychology</span>
-                Behavioral Profiling
-              </h4>
-              <p className="font-body text-on-surface opacity-80 text-sm leading-relaxed">
-                Understanding the 'why' to predict the 'who'. A study of motives, patterns, and the dark recesses of human intent.
-              </p>
-            </div>
-          </div>
-        </section>
+
 
         <section className="flex flex-wrap items-center gap-6 mt-8">
           <Link to="/detective" className="inline-flex items-center justify-center px-8 py-4 bg-primary text-on-primary font-label uppercase tracking-widest text-sm hover:bg-primary-fixed transition-colors duration-300">
