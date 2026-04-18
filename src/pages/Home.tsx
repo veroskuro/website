@@ -21,20 +21,19 @@ const directoryLinks = [
   { to: '/dossier', label: 'Dossier', desc: 'Curriculum vitae, academic record, and contact.' },
 ];
 
+function getGreeting(): string {
+  const hour = new Date().getHours();
+  if (hour >= 5 && hour < 12) return "Good morning. The archives are open.";
+  if (hour >= 12 && hour < 17) return "Good afternoon. The archives are open.";
+  if (hour >= 17 && hour < 22) return "Good evening, detective. The archives are open.";
+  return "Late night session? The archives never close.";
+}
+
 export default function Home() {
   return (
     <main className="bg-surface text-on-surface min-h-screen relative overflow-hidden flex flex-col justify-center py-24 md:py-32">
-      {/* Structural grid background */}
-      <div
-        aria-hidden
-        className="absolute inset-0 opacity-[0.02] pointer-events-none z-0"
-        style={{
-          backgroundImage:
-            "linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
-          backgroundPosition: "center center",
-        }}
-      />
+      {/* Parallax grid background */}
+      <div aria-hidden className="parallax-grid" />
 
       <div className="max-w-5xl mx-auto px-6 md:px-12 w-full relative z-10 mt-12 md:mt-8">
         
@@ -44,8 +43,8 @@ export default function Home() {
             
             {/* Left: Title + Tagline */}
             <div className="flex-1 text-center md:text-left">
-              <h1 className="font-headline text-5xl md:text-7xl lg:text-[7rem] leading-[0.9] text-on-surface tracking-tighter mb-6 animate-slide-up">
-                The Study.
+              <h1 className="font-headline text-5xl md:text-7xl lg:text-[7rem] leading-[0.9] text-on-surface tracking-tighter mb-6 animate-slide-up typewriter-cursor">
+                The Study
               </h1>
               <p className="font-body text-base md:text-lg text-on-surface-variant leading-relaxed italic max-w-lg md:mx-0 mx-auto animate-fade-in delay-3">
                 {profileData.tagline}
@@ -86,9 +85,16 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Time-aware greeting */}
+        <div className="animate-fade-in delay-5 mb-4">
+          <span className="font-body text-sm italic text-on-surface-variant/60">
+            {getGreeting()}
+          </span>
+        </div>
+
         {/* Directory Navigation */}
         <section className="animate-fade-in delay-5">
-          <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-8 pb-4 border-b border-outline-variant/20 flex items-center justify-between">
+          <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-8 pb-4 border-b border-outline-variant/20 flex items-center justify-between small-caps">
             <span>Directory Access</span>
             <span className="material-symbols-outlined text-sm opacity-50">folder_open</span>
           </h2>
@@ -114,7 +120,7 @@ export default function Home() {
         {/* Latest Deduction — proof of life */}
         {latestDeduction && (
           <section className="mt-16 md:mt-20 animate-fade-in delay-8">
-            <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-6 pb-4 border-b border-outline-variant/20 flex items-center justify-between">
+            <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-6 pb-4 border-b border-outline-variant/20 flex items-center justify-between small-caps">
               <span>Latest Deduction</span>
               <span className="material-symbols-outlined text-sm opacity-50">edit_note</span>
             </h2>

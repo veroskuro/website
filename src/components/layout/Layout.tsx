@@ -24,6 +24,9 @@ export default function Layout() {
       {/* Ambient scan line */}
       <div className="scan-line" aria-hidden></div>
       
+      {/* Paper texture overlay — old manuscript grain */}
+      <div className="paper-texture" aria-hidden></div>
+      
       <Navbar />
       
       <main 

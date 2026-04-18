@@ -36,7 +36,7 @@ export default function Deductions() {
   return (
     <div className="flex-grow max-w-4xl mx-auto px-6 md:px-12 py-16 w-full mt-24 mb-24">
       <header className="mb-20 border-b border-outline-variant/30 pb-8">
-        <span className="font-label text-primary text-xs tracking-[0.3em] uppercase mb-4 block">LONG_FORM // ESSAYS</span>
+        <span className="font-label text-primary text-xs tracking-[0.3em] uppercase mb-4 block small-caps">LONG_FORM // ESSAYS</span>
         <h1 className="font-headline text-5xl md:text-7xl font-light tracking-tight text-on-surface leading-[1.1] mb-2">
           Deductions
         </h1>

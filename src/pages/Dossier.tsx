@@ -36,7 +36,7 @@ export default function Dossier() {
           <div className="flex items-center gap-4 mb-6 animate-slide-right">
             <span className="w-12 h-px bg-primary opacity-50"></span>
             <span className="font-label text-primary text-[10px] tracking-[0.3em] uppercase">
-              DOSSIER // {profileData.docketCv.researcherId}
+              DOSSIER // <span className="redacted" title="Hover to reveal">{profileData.docketCv.researcherId}</span>
             </span>
           </div>
           
@@ -55,7 +55,7 @@ export default function Dossier() {
           {/* Left Column: The Philosophy / Bio */}
           <RevealSection className="lg:col-span-6 flex flex-col justify-between">
             <div>
-              <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-8 pb-4 border-b border-outline-variant/20">
+              <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-8 pb-4 border-b border-outline-variant/20 small-caps">
                 The Diagnosis
               </h2>
               <div className="font-body text-lg text-on-surface leading-loose space-y-6 opacity-90">
@@ -85,7 +85,7 @@ export default function Dossier() {
             
             {/* Academic Record */}
             <RevealSection delay={0.1}>
-              <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-8 pb-4 border-b border-outline-variant/20 flex items-center justify-between">
+              <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-8 pb-4 border-b border-outline-variant/20 flex items-center justify-between small-caps">
                 <span>Academic Record</span>
                 <span className="material-symbols-outlined text-sm opacity-50">history_edu</span>
               </h2>
@@ -105,7 +105,7 @@ export default function Dossier() {
 
             {/* Curriculum Vitae (Skills & Status) */}
             <RevealSection delay={0.2}>
-              <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-8 pb-4 border-b border-outline-variant/20 flex items-center justify-between">
+              <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-8 pb-4 border-b border-outline-variant/20 flex items-center justify-between small-caps">
                 <span>Operational Parameters</span>
                 <span className="material-symbols-outlined text-sm opacity-50">tune</span>
               </h2>
@@ -134,7 +134,7 @@ export default function Dossier() {
 
             {/* Contact Protocols */}
             <RevealSection delay={0.3}>
-              <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-8 pb-4 border-b border-outline-variant/20 flex items-center justify-between">
+              <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-8 pb-4 border-b border-outline-variant/20 flex items-center justify-between small-caps">
                 <span>Secure Comms</span>
                 <span className="material-symbols-outlined text-sm opacity-50">lock</span>
               </h2>
