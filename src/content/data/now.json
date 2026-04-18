@@ -1,9 +1,12 @@
 {
   "lastUpdated": "2026-04-18T00:00:00.000Z",
-  "currentFocus": "Currently, my primary focus is wrapping up the experiments for the mBERT cross-lingual sentiment paper. I'm running final ablations on the Hinglish dataset to see where the circuits diverge from standard Hindi. I'm also putting some polish on Circuit Surgeon so it can be released alongside the paper as a reproducibility artifact.\n\nOutside of direct research, I'm trying to improve my theoretical grounding by reviewing Anthropic's latest work on SAEs and feature splitting.",
+  "currentFocus": "Wrapping up the mBERT cross-lingual sentiment paper. Running final ablations on the Hinglish dataset to see where the circuits diverge from standard Hindi. Also polishing Circuit Surgeon so it ships alongside the paper as a reproducibility artifact.\n\nOutside of direct research, reviewing Anthropic's latest work on SAEs and feature splitting. Their monosemanticity paper keeps giving me new angles on how to think about feature geometry.",
+  "currentlyListening": "Lo-fi beats and Nusrat Fateh Ali Khan on loop. The qawwali keeps me locked in during long patching sessions.",
+  "currentlyAnnoyed": "Why does every ML paper bury the actual methodology in the appendix? If your method is sound, put it front and center.",
   "readingList": [
     "Towards Monosemanticity (Anthropic)",
     "A Mathematical Framework for Transformer Circuits",
     "Dune by Frank Herbert"
-  ]
+  ],
+  "lifeUpdate": "Third year is moving fast. Trying to balance the paper deadline with coursework and not lose my mind. Coffee intake has crossed the 'concerning' threshold. The weather in Greater Noida is finally not trying to kill me."
 }

@@ -1,17 +1,35 @@
-
-import { Outlet } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
 export default function Layout() {
+  const location = useLocation();
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [displayLocation, setDisplayLocation] = useState(location);
+
+  useEffect(() => {
+    if (location.pathname !== displayLocation.pathname) {
+      setIsTransitioning(true);
+      const timer = setTimeout(() => {
+        setDisplayLocation(location);
+        setIsTransitioning(false);
+      }, 200);
+      return () => clearTimeout(timer);
+    }
+  }, [location]);
+
   return (
     <div className="min-h-screen flex flex-col selection:bg-primary-container selection:text-primary relative overflow-hidden">
-      {/* Ambient scan line — subtle forensic feel */}
+      {/* Ambient scan line */}
       <div className="scan-line" aria-hidden></div>
       
       <Navbar />
       
-      <main className="flex-grow w-full">
+      <main 
+        className="flex-grow w-full transition-opacity duration-200 ease-in-out"
+        style={{ opacity: isTransitioning ? 0 : 1 }}
+      >
         <Outlet />
       </main>
       

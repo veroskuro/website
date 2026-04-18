@@ -8,6 +8,7 @@ import DeductionPost from './pages/DeductionPost';
 import Investigation from './pages/Investigation';
 import FieldNotes from './pages/FieldNotes';
 import Now from './pages/Now';
+import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="investigation" element={<Investigation />} />
           <Route path="field-notes" element={<FieldNotes />} />
           <Route path="now" element={<Now />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
