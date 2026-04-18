@@ -27,6 +27,9 @@ export default function Layout() {
       <CustomCursor />
       <CommandPalette />
 
+      {/* Analog HUD Background Grid */}
+      <div className="bg-hud-grid" aria-hidden></div>
+
       {/* Ambient scan line */}
       <div className="scan-line" aria-hidden></div>
       

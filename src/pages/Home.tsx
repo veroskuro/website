@@ -54,14 +54,18 @@ function GlowCard({ children, className = '', to }: { children: React.ReactNode;
 
 export default function Home() {
   return (
-    <main className="bg-surface text-on-surface min-h-screen relative flex flex-col justify-center py-24 md:py-32">
+    <main className="bg-surface text-on-surface min-h-screen relative flex flex-col justify-center py-24 md:py-32 overflow-hidden">
+      
+      {/* Ambient background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+
       {/* Absolute positioning container for bleeding text */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 opacity-10 flex flex-col justify-between">
+      <div className="absolute inset-0 pointer-events-none z-0 opacity-20 flex flex-col justify-between">
         <motion.div 
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-          className="font-headline text-[15vw] leading-none whitespace-nowrap text-outline/20 mt-12 ml-[-2vw]"
+          className="font-headline text-[15vw] leading-none whitespace-nowrap text-outline/20 mt-12 ml-[-2vw] mix-blend-plus-lighter"
         >
           MECHANISTIC
         </motion.div>
@@ -69,7 +73,7 @@ export default function Home() {
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="font-headline text-[15vw] leading-none whitespace-nowrap text-outline/20 mb-12 self-end mr-[-2vw]"
+          className="font-headline text-[15vw] leading-none whitespace-nowrap text-outline/20 mb-12 self-end mr-[-2vw] mix-blend-plus-lighter"
         >
           INTERPRETABILITY
         </motion.div>

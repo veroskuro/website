@@ -3,6 +3,11 @@ import { motion, useSpring } from 'framer-motion';
 
 export default function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    setIsTouchDevice(window.matchMedia('(pointer: coarse)').matches);
+  }, []);
 
   // High-fidelity spring physics
   const springConfig = { damping: 25, stiffness: 200, mass: 0.5 };
@@ -31,6 +36,8 @@ export default function CustomCursor() {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, [cursorX, cursorY, dotX, dotY]);
+
+  if (isTouchDevice) return null;
 
   return (
     <>

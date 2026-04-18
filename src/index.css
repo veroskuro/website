@@ -633,6 +633,32 @@ body {
   animation: portrait-scan 4s linear infinite;
 }
 /* ========================
+   BACKGROUND HUD GRID
+   ======================== */
+.bg-hud-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-size: 60px 60px;
+  background-image:
+    linear-gradient(to right, rgba(214, 141, 64, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(214, 141, 64, 0.03) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
+
+.bg-hud-grid::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: 300px 300px;
+  background-image:
+    linear-gradient(to right, rgba(214, 141, 64, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(214, 141, 64, 0.05) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
+
+/* ========================
    CRT GRAIN OVERLAY
    ======================== */
 
