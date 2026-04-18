@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import CustomCursor from '../ui/CustomCursor';
+import CommandPalette from '../ui/CommandPalette';
 
 export default function Layout() {
   const location = useLocation();
@@ -21,6 +23,10 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col selection:bg-primary-container selection:text-primary relative overflow-hidden">
+      {/* Precision Interface Layer */}
+      <CustomCursor />
+      <CommandPalette />
+
       {/* Ambient scan line */}
       <div className="scan-line" aria-hidden></div>
       

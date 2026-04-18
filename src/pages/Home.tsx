@@ -71,12 +71,16 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="relative w-40 md:w-48 aspect-square border border-outline-variant/20 bg-surface-container-low p-1.5 shrink-0 order-first md:order-last animate-scale-in delay-2">
-              <span aria-hidden className="absolute -top-px -left-px w-2 h-2 border-t border-l border-outline-variant/40" />
-              <span aria-hidden className="absolute -top-px -right-px w-2 h-2 border-t border-r border-outline-variant/40" />
-              <span aria-hidden className="absolute -bottom-px -left-px w-2 h-2 border-b border-l border-outline-variant/40" />
-              <span aria-hidden className="absolute -bottom-px -right-px w-2 h-2 border-b border-r border-outline-variant/40" />
-              <img src="/portrait.png" alt={profileData.name} className="w-full h-full object-cover" />
+            <div className="relative w-40 md:w-48 aspect-square border border-outline-variant/20 bg-surface-container-low p-1.5 shrink-0 order-first md:order-last animate-scale-in delay-2 overflow-hidden">
+              <span aria-hidden className="absolute -top-px -left-px w-2 h-2 border-t border-l border-outline-variant/40 z-20" />
+              <span aria-hidden className="absolute -top-px -right-px w-2 h-2 border-t border-r border-outline-variant/40 z-20" />
+              <span aria-hidden className="absolute -bottom-px -left-px w-2 h-2 border-b border-l border-outline-variant/40 z-20" />
+              <span aria-hidden className="absolute -bottom-px -right-px w-2 h-2 border-b border-r border-outline-variant/40 z-20" />
+              
+              {/* Holographic Scan Bar */}
+              <div className="portrait-scan-bar" aria-hidden />
+
+              <img src="/portrait.png" alt={profileData.name} className="w-full h-full object-cover relative z-0" />
             </div>
           </div>
         </header>

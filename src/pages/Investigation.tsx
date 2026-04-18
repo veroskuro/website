@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import { parseMarkdownFiles } from '../utils/markdown';
+import PostIt from '../components/ui/PostIt';
 
 interface InvestigationAttributes {
   title: string;
@@ -35,6 +36,14 @@ export default function Investigation() {
           <div className="flex flex-col gap-4 flex-grow prose prose-invert prose-p:font-body prose-p:text-sm prose-p:italic prose-p:text-on-surface-variant prose-p:leading-relaxed">
             <ReactMarkdown>{activeCase.body}</ReactMarkdown>
           </div>
+
+          <PostIt className="mt-8 self-center lg:self-start">
+            <p className="text-sm">
+              Note: The activation patching results for layer 12 are inconsistent. Need to re-run with different seeds. 
+              <br/><br/>
+              — V.
+            </p>
+          </PostIt>
           
           <div className="pt-6 border-t border-outline-variant/20">
             <span className="font-label text-xs text-primary flex items-center gap-2">
