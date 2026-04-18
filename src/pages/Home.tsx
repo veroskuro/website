@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useRef, useCallback } from 'react';
+import { motion } from 'framer-motion';
 import profileData from '../content/data/profile.json';
 import { parseMarkdownFiles } from '../utils/markdown';
+import ScrambleText from '../components/ui/ScrambleText';
 
 // Pull latest deduction
 interface DeductionAttributes {
@@ -49,18 +51,6 @@ function GlowCard({ children, className = '', to }: { children: React.ReactNode;
     </Link>
   );
 }
-
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import profileData from '../content/data/profile.json';
-import ScrambleText from '../components/ui/ScrambleText';
-
-// Using JSON directly
-const dossierMetadata = {
-  activeInquiry: profileData.currentInvestigation.title,
-  lastUpdated: new Date().toISOString().split('T')[0],
-  status: "DECRYPTED"
-};
 
 export default function Home() {
   return (

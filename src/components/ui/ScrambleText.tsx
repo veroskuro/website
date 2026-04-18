@@ -11,22 +11,20 @@ const CHARACTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*+<>?/\\';
 
 export default function ScrambleText({ text, className = '', delay = 0 }: ScrambleTextProps) {
   const [displayText, setDisplayText] = useState('');
-  const [isScrambling, setIsScrambling] = useState(false);
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout;
+    let timeout: ReturnType<typeof setTimeout>;
     
     // Start after delay
     timeout = setTimeout(() => {
-      setIsScrambling(true);
       let iteration = 0;
-      let scrambleInterval: NodeJS.Timeout;
+      let scrambleInterval: ReturnType<typeof setInterval>;
 
       scrambleInterval = setInterval(() => {
-        setDisplayText((prev) =>
+        setDisplayText(() =>
           text
             .split('')
-            .map((letter, index) => {
+            .map((_, index) => {
               if (index < iteration) {
                 return text[index];
               }
@@ -37,7 +35,6 @@ export default function ScrambleText({ text, className = '', delay = 0 }: Scramb
 
         if (iteration >= text.length) {
           clearInterval(scrambleInterval);
-          setIsScrambling(false);
         }
 
         iteration += 1 / 3; // 3 frames per character resolve
