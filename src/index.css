@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --color-surface-dim: #131313;
@@ -49,9 +50,9 @@
   --color-on-primary-fixed: #261900;
   --color-outline: #9e8d8b;
 
-  --font-headline: "Newsreader", serif;
-  --font-body: "Noto Serif", serif;
-  --font-label: "Space Grotesk", sans-serif;
+  --font-headline: "Newsreader", "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", serif;
+  --font-body: "Noto Serif", "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", serif;
+  --font-label: "Space Grotesk", "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
   
   --radius-DEFAULT: 0.125rem;
   --radius-lg: 0.25rem;
@@ -315,8 +316,9 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* Prevent small-caps from breaking icon fonts */
-.small-caps .material-symbols-outlined {
+/* Prevent small-caps from breaking icon fonts and emojis */
+.small-caps .material-symbols-outlined,
+.emoji {
   font-variant: normal;
 }
 
