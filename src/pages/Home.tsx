@@ -50,38 +50,103 @@ function GlowCard({ children, className = '', to }: { children: React.ReactNode;
   );
 }
 
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import profileData from '../content/data/profile.json';
+import ScrambleText from '../components/ui/ScrambleText';
+
+// Using JSON directly
+const dossierMetadata = {
+  activeInquiry: profileData.currentInvestigation.title,
+  lastUpdated: new Date().toISOString().split('T')[0],
+  status: "DECRYPTED"
+};
+
 export default function Home() {
   return (
-    <main className="bg-surface text-on-surface min-h-screen relative overflow-hidden flex flex-col justify-center py-24 md:py-32">
-      {/* Parallax grid background */}
-      <div aria-hidden className="parallax-grid" />
+    <main className="bg-surface text-on-surface min-h-screen relative flex flex-col justify-center py-24 md:py-32">
+      {/* Absolute positioning container for bleeding text */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 opacity-10 flex flex-col justify-between">
+        <motion.div 
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+          className="font-headline text-[15vw] leading-none whitespace-nowrap text-outline/20 mt-12 ml-[-2vw]"
+        >
+          MECHANISTIC
+        </motion.div>
+        <motion.div 
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          className="font-headline text-[15vw] leading-none whitespace-nowrap text-outline/20 mb-12 self-end mr-[-2vw]"
+        >
+          INTERPRETABILITY
+        </motion.div>
+      </div>
 
-      <div className="max-w-5xl mx-auto px-6 md:px-12 w-full relative z-10 mt-12 md:mt-8">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 w-full relative z-10 mt-12 md:mt-8">
         
-        {/* Header: Title + Portrait */}
-        <header className="mb-16 md:mb-20">
-          <div className="flex flex-col items-center md:items-stretch md:flex-row md:items-end md:justify-between gap-8 md:gap-16">
+        {/* Header: Editorial Typography */}
+        <header className="mb-24 md:mb-32">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             
-            <div className="flex-1 text-center md:text-left">
-              <h1 className="font-headline text-5xl md:text-7xl lg:text-[7rem] leading-[0.9] tracking-tighter mb-6 animate-slide-up gradient-text typewriter-cursor">
-                The Study
-              </h1>
-              <p className="font-body text-base md:text-lg text-on-surface-variant leading-relaxed italic max-w-lg md:mx-0 mx-auto animate-fade-in delay-3">
-                {profileData.tagline}
-              </p>
+            <div className="lg:col-span-8 flex flex-col">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                <div className="font-label text-xs tracking-[0.3em] uppercase text-primary mb-6 flex items-center gap-4">
+                  <span className="w-8 h-px bg-primary/50"></span>
+                  <ScrambleText text="SYS.INITIALIZED // OVERRIDE" delay={0.5} />
+                </div>
+                <h1 className="font-headline text-5xl md:text-8xl lg:text-[8rem] leading-[0.85] tracking-tighter mb-8 text-on-surface">
+                  <span className="block mb-2">The</span>
+                  <span className="block italic text-primary">Study.</span>
+                </h1>
+                <p className="font-label text-sm md:text-base text-on-surface-variant leading-relaxed max-w-lg mb-8 uppercase tracking-widest border-l-2 border-primary/30 pl-4">
+                  <ScrambleText text={profileData.tagline} delay={1.2} />
+                </p>
+              </motion.div>
             </div>
 
-            <div className="relative w-40 md:w-48 aspect-square border border-outline-variant/20 bg-surface-container-low p-1.5 shrink-0 order-first md:order-last animate-scale-in delay-2 overflow-hidden">
-              <span aria-hidden className="absolute -top-px -left-px w-2 h-2 border-t border-l border-outline-variant/40 z-20" />
-              <span aria-hidden className="absolute -top-px -right-px w-2 h-2 border-t border-r border-outline-variant/40 z-20" />
-              <span aria-hidden className="absolute -bottom-px -left-px w-2 h-2 border-b border-l border-outline-variant/40 z-20" />
-              <span aria-hidden className="absolute -bottom-px -right-px w-2 h-2 border-b border-r border-outline-variant/40 z-20" />
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="lg:col-span-4 relative mt-12 lg:mt-0"
+            >
+              <div className="relative w-48 md:w-64 aspect-[3/4] border border-outline-variant/30 bg-surface-container-low p-2 mx-auto lg:mx-0 overflow-hidden group">
+                <span aria-hidden className="absolute top-0 left-0 w-3 h-3 border-t border-l border-primary/50 z-20" />
+                <span aria-hidden className="absolute top-0 right-0 w-3 h-3 border-t border-r border-primary/50 z-20" />
+                <span aria-hidden className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-primary/50 z-20" />
+                <span aria-hidden className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-primary/50 z-20" />
+                
+                {/* Microfiche Scan Line */}
+                <motion.div 
+                  className="absolute left-0 right-0 h-px bg-primary/40 z-10 shadow-[0_0_8px_rgba(214,141,64,0.8)]"
+                  animate={{ top: ["0%", "100%", "0%"] }}
+                  transition={{ duration: 6, ease: "linear", repeat: Infinity }}
+                />
+
+                <div className="w-full h-full relative overflow-hidden mix-blend-luminosity opacity-80 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-700">
+                  <img src="/portrait.png" alt={profileData.name} className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-surface mix-blend-color opacity-40 group-hover:opacity-10 transition-opacity duration-700"></div>
+                </div>
+              </div>
               
-              {/* Holographic Scan Bar */}
-              <div className="portrait-scan-bar" aria-hidden />
-
-              <img src="/portrait.png" alt={profileData.name} className="w-full h-full object-cover relative z-0" />
-            </div>
+              <div className="mt-6 flex flex-col gap-1 font-label text-[10px] tracking-widest text-outline uppercase ml-8 lg:ml-0">
+                <div className="flex justify-between w-48 md:w-64 border-b border-outline-variant/20 pb-1">
+                  <span>SUBJECT</span>
+                  <span className="text-on-surface-variant">0x8873</span>
+                </div>
+                <div className="flex justify-between w-48 md:w-64 pt-1">
+                  <span>CLEARANCE</span>
+                  <span className="text-primary">LEVEL 4</span>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </header>
 

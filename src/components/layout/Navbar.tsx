@@ -37,7 +37,7 @@ export default function Navbar() {
               {isMobileMenuOpen ? 'close' : 'menu'}
             </span>
           </button>
-          <Link to="/" className="text-xl md:text-2xl font-bold tracking-tighter text-primary uppercase font-headline">
+          <Link to="/" className="magnetic text-xl md:text-2xl font-bold tracking-tighter text-primary uppercase font-headline">
             {siteSettings.title}
           </Link>
         </div>
@@ -46,7 +46,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center space-x-12">
           <Link 
             to="/" 
-            className={`font-headline tracking-tight uppercase text-sm transition-all duration-300 ${
+            className={`magnetic font-headline tracking-tight uppercase text-sm transition-all duration-300 ${
               isActive('/') ? 'text-primary border-b border-primary pb-1' : 'text-on-surface opacity-70 hover:text-primary hover:opacity-100'
             }`}
           >
@@ -54,7 +54,7 @@ export default function Navbar() {
           </Link>
           <Link 
             to="/investigation" 
-            className={`font-headline tracking-tight uppercase text-sm transition-all duration-300 ${
+            className={`magnetic font-headline tracking-tight uppercase text-sm transition-all duration-300 ${
               isActive('/investigation') ? 'text-primary border-b border-primary pb-1' : 'text-on-surface opacity-70 hover:text-primary hover:opacity-100'
             }`}
           >
@@ -62,7 +62,7 @@ export default function Navbar() {
           </Link>
           <Link 
             to="/field-notes" 
-            className={`font-headline tracking-tight uppercase text-sm transition-all duration-300 ${
+            className={`magnetic font-headline tracking-tight uppercase text-sm transition-all duration-300 ${
               isActive('/field-notes') ? 'text-primary border-b border-primary pb-1' : 'text-on-surface opacity-70 hover:text-primary hover:opacity-100'
             }`}
           >
@@ -78,7 +78,7 @@ export default function Navbar() {
           </Link>
           <Link 
             to="/artifacts" 
-            className={`font-headline tracking-tight uppercase text-sm transition-all duration-300 ${
+            className={`magnetic font-headline tracking-tight uppercase text-sm transition-all duration-300 ${
               isActive('/artifacts') ? 'text-primary border-b border-primary pb-1' : 'text-on-surface opacity-70 hover:text-primary hover:opacity-100'
             }`}
           >
@@ -86,7 +86,7 @@ export default function Navbar() {
           </Link>
           <Link 
             to="/dossier" 
-            className={`font-headline tracking-tight uppercase text-sm transition-all duration-300 ${
+            className={`magnetic font-headline tracking-tight uppercase text-sm transition-all duration-300 ${
               isActive('/dossier') ? 'text-primary border-b border-primary pb-1' : 'text-on-surface opacity-70 hover:text-primary hover:opacity-100'
             }`}
           >
