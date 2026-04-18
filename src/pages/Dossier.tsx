@@ -1,4 +1,18 @@
 import profileData from "../content/data/profile.json";
+import { useInView } from "../hooks/useInView";
+
+function RevealSection({ children, className = '', delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+  const { ref, isVisible } = useInView();
+  return (
+    <div
+      ref={ref as React.RefObject<HTMLDivElement>}
+      className={`reveal ${isVisible ? 'visible' : ''} ${className}`}
+      style={{ transitionDelay: `${delay}s` }}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function Dossier() {
   return (
@@ -17,21 +31,21 @@ export default function Dossier() {
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10">
         
-        {/* Header Block */}
+        {/* Header Block — entrance animation */}
         <header className="mb-20 md:mb-32">
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4 mb-6 animate-slide-right">
             <span className="w-12 h-px bg-primary opacity-50"></span>
             <span className="font-label text-primary text-[10px] tracking-[0.3em] uppercase">
               DOSSIER // {profileData.docketCv.researcherId}
             </span>
           </div>
           
-          <h1 className="font-headline text-[3.5rem] md:text-7xl lg:text-[7.5rem] leading-[0.9] text-on-surface tracking-tighter mb-8">
+          <h1 className="font-headline text-[3.5rem] md:text-7xl lg:text-[7.5rem] leading-[0.9] text-on-surface tracking-tighter mb-8 animate-slide-up delay-1">
             Mechanistic <br className="hidden md:block" />
             <span className="text-primary italic pr-4">Interpretability.</span>
           </h1>
           
-          <p className="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed">
+          <p className="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed animate-fade-in delay-3">
             I don't trust black boxes. I trust the geometry of the weights. If a model exhibits a behavior, there is a circuit responsible for it. My job is to find it, isolate it, and prove it.
           </p>
         </header>
@@ -39,7 +53,7 @@ export default function Dossier() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
           
           {/* Left Column: The Philosophy / Bio */}
-          <section className="lg:col-span-6 flex flex-col justify-between">
+          <RevealSection className="lg:col-span-6 flex flex-col justify-between">
             <div>
               <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-8 pb-4 border-b border-outline-variant/20">
                 The Diagnosis
@@ -64,13 +78,13 @@ export default function Dossier() {
                 End of philosophy. Check the record.
               </span>
             </div>
-          </section>
+          </RevealSection>
 
           {/* Right Column: The Hard Facts (CV, Academic, Contact) */}
           <aside className="lg:col-span-6 space-y-16">
             
             {/* Academic Record */}
-            <section>
+            <RevealSection delay={0.1}>
               <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-8 pb-4 border-b border-outline-variant/20 flex items-center justify-between">
                 <span>Academic Record</span>
                 <span className="material-symbols-outlined text-sm opacity-50">history_edu</span>
@@ -87,10 +101,10 @@ export default function Dossier() {
                   </div>
                 ))}
               </div>
-            </section>
+            </RevealSection>
 
             {/* Curriculum Vitae (Skills & Status) */}
-            <section>
+            <RevealSection delay={0.2}>
               <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-8 pb-4 border-b border-outline-variant/20 flex items-center justify-between">
                 <span>Operational Parameters</span>
                 <span className="material-symbols-outlined text-sm opacity-50">tune</span>
@@ -109,17 +123,17 @@ export default function Dossier() {
                   {profileData.fieldSkills.map((skill, idx) => (
                     <span 
                       key={idx} 
-                      className="font-label text-xs px-3 py-1.5 border border-outline-variant/20 text-on-surface-variant hover:text-primary hover:border-primary/40 transition-colors cursor-default"
+                      className="font-label text-xs px-3 py-1.5 border border-outline-variant/20 text-on-surface-variant hover:text-primary hover:border-primary/40 transition-colors duration-300 cursor-default"
                     >
                       {skill}
                     </span>
                   ))}
                 </div>
               </div>
-            </section>
+            </RevealSection>
 
             {/* Contact Protocols */}
-            <section>
+            <RevealSection delay={0.3}>
               <h2 className="font-label text-xs tracking-[0.2em] text-outline uppercase mb-8 pb-4 border-b border-outline-variant/20 flex items-center justify-between">
                 <span>Secure Comms</span>
                 <span className="material-symbols-outlined text-sm opacity-50">lock</span>
@@ -128,13 +142,13 @@ export default function Dossier() {
               <div className="flex flex-col gap-4">
                 <a 
                   href={`mailto:${profileData.contact.email}`} 
-                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 p-4 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all group"
+                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 p-4 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-4 min-w-0">
-                    <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors shrink-0">mail</span>
+                    <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors duration-300 shrink-0">mail</span>
                     <span className="font-body text-base md:text-lg text-on-surface truncate">{profileData.contact.email}</span>
                   </div>
-                  <span className="font-label text-[10px] tracking-widest uppercase text-outline group-hover:text-primary transition-colors shrink-0 pl-10 sm:pl-0">
+                  <span className="font-label text-[10px] tracking-widest uppercase text-outline group-hover:text-primary transition-colors duration-300 shrink-0 pl-10 sm:pl-0">
                     Dispatch
                   </span>
                 </a>
@@ -143,18 +157,18 @@ export default function Dossier() {
                   href={profileData.contact.github} 
                   target="_blank" 
                   rel="noreferrer"
-                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 p-4 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all group"
+                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 p-4 bg-surface-container-low border border-outline-variant/10 hover:border-primary/40 hover:bg-surface-container transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-4 min-w-0">
-                    <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors shrink-0">code</span>
+                    <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors duration-300 shrink-0">code</span>
                     <span className="font-body text-base md:text-lg text-on-surface">@veroskuro</span>
                   </div>
-                  <span className="font-label text-[10px] tracking-widest uppercase text-outline group-hover:text-primary transition-colors shrink-0 pl-10 sm:pl-0">
+                  <span className="font-label text-[10px] tracking-widest uppercase text-outline group-hover:text-primary transition-colors duration-300 shrink-0 pl-10 sm:pl-0">
                     Access
                   </span>
                 </a>
               </div>
-            </section>
+            </RevealSection>
 
           </aside>
         </div>
