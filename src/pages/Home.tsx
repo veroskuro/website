@@ -124,9 +124,9 @@ export default function Home() {
                   transition={{ duration: 6, ease: "linear", repeat: Infinity }}
                 />
 
-                <div className="w-full h-full relative overflow-hidden mix-blend-luminosity opacity-80 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-700">
+                <div className="w-full h-full relative overflow-hidden md:mix-blend-luminosity md:opacity-80 opacity-100 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-700">
                   <img src="/portrait.png" alt={profileData.name} className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-surface mix-blend-color opacity-40 group-hover:opacity-10 transition-opacity duration-700"></div>
+                  <div className="absolute inset-0 bg-surface mix-blend-color md:opacity-40 opacity-0 group-hover:opacity-10 transition-opacity duration-700"></div>
                 </div>
               </div>
               

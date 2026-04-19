@@ -36,7 +36,7 @@ function App() {
 
   return (
     <>
-      <div className="crt-grain crt-flicker pointer-events-none" aria-hidden />
+
       <BrowserRouter>
       <ScrollToTop />
       <Routes>
